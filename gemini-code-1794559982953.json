@@ -1,0 +1,14 @@
+{
+  "name": "workbook-liderazgo-femenino",
+  "version": "2.0.0",
+  "description": "Plataforma interactiva de liderazgo femenino y posicionamiento ejecutivo con IA y generación de PDF.",
+  "main": "js/app.js",
+  "scripts": {
+    "start": "netlify dev",
+    "build": "echo 'Static build ready'"
+  },
+  "dependencies": {
+    "jspdf": "^2.5.1",
+    "html2canvas": "^1.4.1"
+  }
+}
