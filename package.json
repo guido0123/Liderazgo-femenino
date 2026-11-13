@@ -1,0 +1,9 @@
+{
+  "name": "workbook-liderazgo-femenino",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Workbook interactivo de Liderazgo Femenino y Posicionamiento Ejecutivo",
+  "scripts": {"test": "node tests/logic.test.js"},
+  "engines": {"node": ">=18"},
+  "devDependencies": {"netlify-cli": "^23.0.0"}
+}

@@ -1,0 +1,2 @@
+@page{size:A4;margin:16mm}
+@media print{.no-print,nav,button,.coach-enhance-modal{display:none!important}body{background:#fff!important;color:#4D270F!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}.case-card,.priority-fiche,.week-card,.stage-grid article{break-inside:avoid;box-shadow:none!important}textarea,input,select{color:#4D270F!important;border-color:#D3C4B1!important}.institution-logos{display:none!important}}

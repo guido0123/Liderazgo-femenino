@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Workbook: Liderazgo Femenino y Posicionamiento Ejecutivo · Guido Cattaneo & Luisa Cárdenas</title>
+<meta name="theme-color" content="#ffffff">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#4D270F;
+  --ink:#4D270F;
+  --cyan:#F87F57;
+  --cyan-d:#B9684D;
+  --soft:#EDE1D2;
+  --line:#d3c4b1;
+  --mut:#7a5236;
+  --amber:#FFA100;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{margin:0;background:#fff;color:var(--ink);font:19px/1.65 'Plus Jakarta Sans',system-ui,-apple-system,'Segoe UI',sans-serif;-webkit-font-smoothing:antialiased}
+.wrap{max-width:960px;margin:0 auto;padding:0 24px}
+h1,h2,h3,h4{color:var(--navy);margin:0;line-height:1.15;letter-spacing:-.02em}
+h2{font-size:clamp(34px,4vw,50px)} h3{font-size:24px} h4{font-size:16px;letter-spacing:.02em;margin:0 0 8px}
+p{margin:0 0 12px}
+a{color:var(--cyan-d)}
+:focus-visible{outline:3px solid var(--cyan);outline-offset:2px}
+section{padding:96px 0;border-top:1px solid var(--line)} section.alt{background:var(--soft)}
+.lead{color:var(--mut);max-width:64ch;margin:14px 0 44px;font-size:20px}
+.top{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.95);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;gap:20px;height:60px;max-width:1200px}
+.brand{font-weight:800;color:var(--navy);white-space:nowrap}
+.links{display:flex;gap:4px;overflow-x:auto;flex:1;scrollbar-width:none}
+.links a{white-space:nowrap;text-decoration:none;color:var(--mut);font-size:16px;font-weight:600;padding:8px 12px;border-radius:999px}
+.links a.on{background:var(--navy);color:#fff}
+.btn{background:var(--cyan);color:#fff;font:700 18px 'Plus Jakarta Sans',sans-serif;border:0;border-radius:999px;padding:13px 26px;cursor:pointer;text-decoration:none;display:inline-block}
+.btn:hover{filter:brightness(.92)} .btn:disabled{opacity:.4;cursor:not-allowed}
+.btn.ghost{background:#fff;border:1.5px solid var(--navy);color:var(--navy);padding:9px 18px;font-size:16px}
+.hero{padding:72px 0 88px}
+.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:64px;align-items:center}
+.hero h1{font-size:clamp(38px,5.2vw,65px);margin-bottom:18px;color:var(--navy)}
+.hero p{color:var(--mut);font-size:22px;max-width:46ch}
+.login{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+.login input{flex:1;min-width:220px;padding:13px 18px;border:1.5px solid var(--line);border-radius:999px;font:inherit}
+.photo{justify-self:center;text-align:center}
+.photo img{display:block;width:100%;max-width:300px;border-radius:28px;box-shadow:16px 16px 0 var(--cyan)}
+.photo b{display:block;margin-top:34px;color:var(--navy);font-size:22px} .photo span{color:var(--mut);font-size:17px}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:56px}
+.acc{list-style:none;padding:0;margin:0}.acc li{padding:10px 0;border-bottom:1px solid var(--line);font-size:17px}
+.clients{margin-top:40px;color:var(--mut);font-size:18px}
+.doms{display:grid;grid-template-columns:1fr 1fr;gap:0 56px;margin-bottom:48px}
+.doms div{padding:14px 0;border-bottom:1px solid var(--line)} .doms b{color:var(--navy);display:block} .doms span{color:var(--mut);font-size:17px}
+ol.route{padding-left:22px;max-width:60ch} ol.route li{margin-bottom:8px}
+.note{border-left:4px solid var(--cyan);padding:6px 0 6px 18px;color:var(--mut);margin:28px 0;max-width:68ch;background:rgba(248,127,87,0.08);border-radius:0 8px 8px 0}
+h3.dom{margin:44px 0 6px;font-size:26px;padding-left:14px} h3.dom span{display:block;font-size:17px;font-weight:500;color:var(--mut);letter-spacing:0;margin-top:2px}
+.legend{color:var(--mut);font-size:17px;margin-bottom:8px}
+.q{display:grid;grid-template-columns:36px 1fr auto;gap:16px;align-items:center;padding:18px 0;border-bottom:1px solid var(--line)}
+.q p{margin:0}.q .n{color:var(--cyan-d);font-weight:800}
+.scale{display:flex;gap:6px}
+.scale button{width:42px;height:42px;border-radius:50%;border:1.5px solid var(--line);background:#fff;color:var(--navy);font:700 17px inherit;cursor:pointer}
+.scale button:hover:not(:disabled){border-color:var(--cyan)} .scale button.on{background:var(--cyan);border-color:var(--cyan);color:#fff}
+.scale button:disabled{cursor:default;opacity:.35} .scale button.on:disabled{opacity:1;background:var(--navy);border-color:var(--navy);color:#fff}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-top:32px;flex-wrap:wrap} .lock{margin:0;font-weight:700;color:var(--navy)}
+.radar{width:100%;max-width:520px;display:block;margin:0 auto 24px}
+.leg{display:flex;gap:24px;justify-content:center;font-size:16px;font-weight:600;margin-bottom:32px}.leg i{display:inline-block;width:12px;height:12px;border-radius:50%;margin-right:6px}
+table{width:100%;border-collapse:collapse;font-size:17px}th{text-align:left;color:var(--mut);font-weight:600;padding:10px 12px 10px 0;border-bottom:2px solid var(--navy)}td{padding:14px 12px 14px 0;border-bottom:1px solid var(--line);vertical-align:top}
+.tw{overflow-x:auto}.lv0{color:#b45309;font-weight:700}.lv1{color:var(--cyan-d);font-weight:700}.lv2{color:var(--navy);font-weight:700}
+details.caso{border-bottom:1px solid var(--line)} details summary{cursor:pointer;padding:20px 0;font-weight:700;color:var(--navy);font-size:22px}
+details .body{padding:0 0 28px}.case{background:var(--soft);padding:18px 20px;border-radius:12px;font-size:18px;border-left:4px solid var(--cyan-d)}.crit{font-size:16px;color:var(--mut)}
+.f{display:block;margin:0 0 18px}.f span{display:block;font-size:16px;font-weight:600;color:var(--navy);margin-bottom:6px}
+.f input,.f select,.f textarea{width:100%;padding:11px 14px;border:1.5px solid var(--line);border-radius:10px;font:inherit;font-size:19px;background:#fff;color:var(--ink)}
+.f textarea{resize:vertical;min-height:52px;overflow:hidden}.f select{max-width:340px}
+.f input:focus,.f select:focus,.f textarea:focus{border-color:var(--cyan);outline:0}
+.act{padding:44px 0;border-bottom:1px solid var(--line)}.act:first-of-type{padding-top:0}
+.tag{color:var(--cyan-d);font-weight:700;font-size:16px}.meta{color:var(--mut);font-size:17px;margin:6px 0 0}.obj{font-size:20px;margin:14px 0 22px}
+.act-g{display:grid;grid-template-columns:1.4fr 1fr;gap:40px;margin-bottom:28px}.act-g ol{margin:0;padding-left:20px}.act-g li{margin-bottom:6px}
+.fields{background:var(--soft);border:1px solid var(--line);padding:24px 26px 8px;border-radius:16px}
+.smart-card{border-top:3px solid var(--navy);padding-top:24px;margin-top:40px}
+.sug{background:#Fdf6ed;border-radius:12px;padding:14px 18px;font-size:17px;margin-bottom:18px;border:1px solid var(--amber)}
+.tw textarea,.tw select{width:100%;padding:8px 10px;border:1.5px solid var(--line);border-radius:10px;font:inherit;font-size:18px;resize:vertical;overflow:hidden;background:#fff}.tw select{min-width:84px}
+.step{display:inline-block;background:var(--cyan);color:#fff;font-weight:700;font-size:14px;padding:4px 12px;border-radius:99px;margin-bottom:14px}
+.prog{height:4px;background:#EDE1D2}.prog i{display:block;height:100%;background:var(--cyan);transition:width .4s}
+.links a.ok{color:#4D270F;font-weight:800}.links a.on{background:var(--navy);color:#fff}
+.pill{display:inline-block;padding:3px 12px;border-radius:99px;font-size:14px;font-weight:700;white-space:nowrap}.pill.lv0{background:#fde8e8;color:#991b1b}.pill.lv1{background:#fef3c7;color:#92400e}.pill.lv2{background:#d1fae5;color:#065f46}
+.meter{height:8px;background:#EDE1D2;border-radius:99px;overflow:hidden;margin-top:6px;min-width:110px}.meter i{display:block;height:100%;border-radius:99px;transition:width .3s}
+.cnt{display:block;font-size:17px;font-weight:600;color:var(--navy);min-width:200px}
+.next{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-top:56px;padding:22px 28px;background:var(--navy);color:#EDE1D2;border-radius:16px}.next span{font-weight:600}
+.dot,.tag i{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:10px}
+section.dark{background:var(--navy);color:#EDE1D2;border-top:0}.dark h2{color:#fff}.dark h4{color:var(--cyan)}.dark .lead,.dark .clients{color:#d3c4b1}.dark .acc li{border-color:rgba(237,225,210,.2);color:#EDE1D2}.dark a{color:var(--cyan)}
+.login .cnt{align-self:center}
+.only-print{display:none}
+footer{padding:36px 0;text-align:center;color:var(--mut);font-size:16px;border-top:1px solid var(--line)}
+.coach-btn{display:inline-flex;align-items:center;gap:10px;margin:8px 0 26px;padding:13px 26px 13px 18px;border:0;border-radius:999px;cursor:pointer;color:#fff;font:700 17px 'Plus Jakarta Sans',sans-serif;text-shadow:0 1px 2px rgba(77,39,15,.55);background:linear-gradient(100deg,#F87F57 -25%,#B9684D 40%,#4D270F 100%);box-shadow:0 6px 18px rgba(77,39,15,.22);transition:transform .15s,box-shadow .15s,filter .15s}
+.coach-btn:hover{transform:translateY(-2px);box-shadow:0 10px 26px rgba(248,127,87,.38),0 6px 18px rgba(77,39,15,.28);filter:brightness(1.1)}
+.coach-btn:active{transform:translateY(0)}
+.coach-btn.big{font-size:19px;padding:15px 30px 15px 22px;margin:28px 0 8px}
+.coach-ov{position:fixed;inset:0;z-index:100;background:rgba(77,39,15,.55);-webkit-backdrop-filter:blur(3px);backdrop-filter:blur(3px);display:flex;justify-content:flex-end;animation:cfade .2s}
+.coach-dr{width:min(540px,100%);height:100%;background:#fff;display:flex;flex-direction:column;box-shadow:-18px 0 50px rgba(77,39,15,.3);animation:cslide .25s ease-out;outline:0}
+.coach-hd{background:linear-gradient(120deg,#4D270F 55%,#B9684D);color:#fff;padding:18px 22px 16px;display:flex;gap:12px;align-items:flex-start;justify-content:space-between}
+.coach-hd h3{color:#fff;font-size:20px;line-height:1.25}
+.coach-x{flex:none;width:38px;height:38px;border-radius:50%;border:1.5px solid rgba(255,255,255,.4);background:transparent;color:#fff;font:600 22px/1 'Plus Jakarta Sans',sans-serif;cursor:pointer}
+.coach-x:hover{background:rgba(255,255,255,.14);border-color:#F87F57}
+.coach-badge{display:inline-block;margin-top:10px;background:#F87F57;color:#fff;font-weight:700;font-size:14px;padding:4px 12px;border-radius:14px;line-height:1.4}
+.coach-bd{flex:1;overflow-y:auto;padding:20px 22px;background:var(--soft);display:flex;flex-direction:column;gap:14px}
+.cmsg{padding:14px 16px;border-radius:16px;font-size:17px;line-height:1.6;max-width:94%;word-wrap:break-word}
+.cmsg.u{align-self:flex-end;background:#4D270F;color:#fff;border-bottom-right-radius:4px;white-space:pre-wrap}
+.cmsg.c{align-self:flex-start;background:#fff;border:1px solid var(--line);border-bottom-left-radius:4px}
+.cmsg p{margin:0 0 8px}.cmsg p:last-child{margin:0}.cmsg ul{margin:0 0 8px;padding-left:22px}.cmsg li{margin-bottom:4px}
+.cload{display:flex;align-items:center;gap:12px;color:var(--navy);font-weight:600;font-size:16px;padding:6px 2px}
+.cspin{width:22px;height:22px;border-radius:50%;border:3px solid #EDE1D2;border-top-color:#F87F57;animation:cspin .8s linear infinite;flex:none}
+.cerr{background:#fef2f2;border:1px solid #fecaca;color:#991b1b;padding:12px 14px;border-radius:12px;font-size:16px}
+.cerr button{margin-top:10px}
+.cinfo{background:#fff8f0;border:1px solid var(--amber);border-radius:12px;padding:12px 14px;font-size:16px;color:var(--navy)}
+.cfoot{color:var(--mut);font-size:13px;margin-top:2px}
+.coach-ft{border-top:1px solid var(--line);padding:14px 18px 16px;background:#fff;display:flex;gap:10px;align-items:flex-end}
+.coach-ft textarea{flex:1;resize:none;min-height:48px;max-height:140px;padding:11px 14px;border:1.5px solid var(--line);border-radius:14px;font:inherit;font-size:17px;color:var(--ink)}
+.coach-ft textarea:focus{border-color:var(--cyan);outline:0}
+.coach-ft .btn{padding:12px 20px;font-size:16px}
+@keyframes cspin{to{transform:rotate(360deg)}}@keyframes cfade{from{opacity:0}to{opacity:1}}@keyframes cslide{from{transform:translateX(40px);opacity:.4}to{transform:none;opacity:1}}
+@media(max-width:760px){.coach-btn{font-size:16px}.coach-hd h3{font-size:18px}}
+@media(prefers-reduced-motion:reduce){.coach-ov,.coach-dr,.cspin{animation-duration:0s}.cspin{animation:none;border-top-color:#F87F57}.coach-btn{transition:none}}
+@media(max-width:760px){.hero .wrap,.cols,.doms,.act-g{grid-template-columns:1fr;gap:32px}.q{grid-template-columns:28px 1fr}.scale{grid-column:1/-1}section{padding:64px 0}.top .brand{display:none}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+@media print{.top,.hero,footer,.no-print,section:not(.printable){display:none!important}
+.only-print{display:block;margin-bottom:16px}section.printable{padding:12px 0;border:0;background:#fff}.wrap{max-width:none;padding:0}
+.f input,.f select,.f textarea{border:1px solid #888}.smart-card,tr{break-inside:avoid}body{font-size:14px}}
+.mapa{background:#fff;border:1.5px solid var(--line);border-radius:20px;padding:28px;margin-bottom:40px;box-shadow:0 10px 30px rgba(77,39,15,.08)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:8px 0 20px}
+.chip{border:1.5px solid var(--line);background:#fff;color:var(--navy);border-radius:999px;padding:8px 14px;font:600 15px 'Plus Jakarta Sans',sans-serif;cursor:pointer}
+.chip.on{background:var(--navy);color:#fff;border-color:var(--navy)}.chip i{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:8px}
+.insight{background:var(--soft);border-left:5px solid var(--cyan);border-radius:12px;padding:18px 22px}
+.ia-box{background:var(--soft);border:1px solid var(--line);border-radius:16px;padding:22px;margin:24px 0}
+.ia-ta{width:100%;padding:12px 14px;border:1.5px solid var(--line);border-radius:12px;font:inherit;font-size:18px;resize:vertical;background:#fff;color:var(--ink)}
+.ia-ta:focus{border-color:var(--cyan);outline:0}.ia-box .bar{margin:14px 0}
+.cont{margin-top:28px;text-align:right}
+.pl{border:1.5px solid var(--line);border-top:6px solid var(--cyan);border-radius:16px;padding:26px;margin-bottom:28px;background:#fff}
+.pl ol{padding-left:22px}.pl li{margin-bottom:8px}
+.dias{color:var(--cyan-d);font-weight:800;font-size:15px;text-transform:uppercase;letter-spacing:.06em}
+.wk{display:grid;grid-template-columns:110px 1.6fr 150px 1.2fr;gap:14px;padding:14px 0;border-bottom:1px solid var(--line);align-items:start}
+.wk select{width:100%;padding:10px;border:1.5px solid var(--line);border-radius:10px;font:inherit;font-size:17px;background:#fff}
+.wk textarea{width:100%;padding:8px 10px;border:1.5px solid var(--line);border-radius:10px;font:inherit;font-size:17px;resize:vertical;overflow:hidden}
+.photo .tag{display:block;margin-bottom:18px}
+@media(max-width:760px){.photo{order:-1}.wk{grid-template-columns:1fr}}
+</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.3.1/umd/react.production.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.3.1/umd/react-dom.production.min.js"></script>
+<script>if(!window.React||!window.ReactDOM){document.write('<script src="https://cdn.jsdelivr.net/npm/react@18.3.1/umd/react.production.min.js"><\/script><script src="https://cdn.jsdelivr.net/npm/react-dom@18.3.1/umd/react-dom.production.min.js"><\/script>')}</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+<link rel="stylesheet" href="css/enhancements.css">
+<link rel="stylesheet" href="css/print.css" media="print">
+</head>
+<body>
+<div id="root"></div>
+<script>if(!window.React){document.getElementById("root").innerHTML='<p style="font:16px sans-serif;padding:32px">No se pudo cargar React. Revisa tu conexión o permite cdnjs.cloudflare.com y cdn.jsdelivr.net.</p>';throw new Error("React no cargó")}</script>
+<script>
+// Dominios del programa de Liderazgo Femenino
+const DOMINIOS = [
+  { id: 'identidad', name: 'Identidad y Herencia', desc: 'Desmantelamiento de moldes heredados y consolidación de un estilo auténtico.' },
+  { id: 'navegacion', name: 'Navegación Política', desc: 'Mapeo del entorno corporativo, capital relacional y redes de patrocinio.' },
+  { id: 'impostor', name: 'Superación del Impostor', desc: 'Desmantelamiento de dudas y construcción de evidencia objetiva de capacidad.' },
+  { id: 'marca', name: 'Marca Personal y Visibilidad', desc: 'Estrategias de posicionamiento ejecutivo e impacto sin presunción.' },
+  { id: 'negociacion', name: 'Negociación Estratégica', desc: 'Intereses vs. posiciones, BATNA y superación de sesgos al reclamar valor.' },
+  { id: 'conflicto', name: 'Resolución de Conflictos', desc: 'Gestión emocional, escucha activa y creación de valor en crisis.' },
+  { id: 'recursos', name: 'Gestión de Recursos', desc: 'Auditoría de aprendizaje, hábitos sostenibles y límites ejecutivos.' },
+  { id: 'posicionamiento', name: 'Plan de Crecimiento', desc: 'Hoja de ruta a 90 días, micro-hábitos e integración con IA.' }
+];
+
+// 24 Afirmaciones
+const AFIRMACIONES_INICIALES = [
+  { id: 1, domain: 'identidad', text: 'Cuestiono los modelos de autoridad tradicionales y defino mi propio estilo de liderazgo.' },
+  { id: 2, domain: 'identidad', text: 'Identifico la herencia cultural o familiar que condiciona mi forma de liderar.' },
+  { id: 3, domain: 'identidad', text: 'Distingo con claridad cuando un obstáculo es personal o es una barrera del entorno.' },
+  { id: 4, domain: 'navegacion', text: 'Mapeo con precisión quiénes toman las decisiones y quiénes influyen en mi organización.' },
+  { id: 5, domain: 'navegacion', text: 'Cultivo activamente relaciones con sponsors que visibilizan mi trabajo ante la dirección.' },
+  { id: 6, domain: 'navegacion', text: 'Anticipo resistencias políticas y construyo consensos previos antes de presentar.' },
+  { id: 7, domain: 'impostor', text: 'Reconozco mis logros recientes con objetividad sin atribuirlos a la suerte o al azar.' },
+  { id: 8, domain: 'impostor', text: 'Me postulo o acepto retos ejecutivos aun cuando no cumpla el 100% de los requisitos.' },
+  { id: 9, domain: 'impostor', text: 'Pido apoyo o recursos sin sentir que es una señal de debilidad o incapacidad.' },
+  { id: 10, domain: 'marca', text: 'Comunico el impacto y métricas de mi equipo con seguridad en reuniones de alta exposición.' },
+  { id: 11, domain: 'marca', text: 'Tengo una promesa de valor clara sobre lo que me distingue como líder ejecutiva.' },
+  { id: 12, domain: 'marca', text: 'Aseguro que mi trabajo sea reconocido sin sentir que estoy "presumiendo".' },
+  { id: 13, domain: 'negociacion', text: 'Preparo mis negociaciones definiendo mis intereses, los de la otra parte y mi BATNA.' },
+  { id: 14, domain: 'negociacion', text: 'Pido ajustes de presupuesto, salario o plazos respaldando mi petición con datos duros.' },
+  { id: 15, domain: 'negociacion', text: 'Supero los sesgos de género al negociar enmarcando el beneficio mutuo.' },
+  { id: 16, domain: 'conflicto', text: 'Mantengo la calma y la regulación emocional cuando enfrento objeciones o desacuerdos.' },
+  { id: 17, domain: 'conflicto', text: 'Utilizo preguntas poderosas para descubrir los intereses reales tras una posición dura.' },
+  { id: 18, domain: 'conflicto', text: 'Pauso la discusión cuando sube la tensión para transformar el conflicto en soluciones.' },
+  { id: 19, domain: 'recursos', text: 'Fijo límites claros en mi agenda para cuidar mi energía y mi bienestar personal.' },
+  { id: 20, domain: 'recursos', text: 'Aplico herramientas de desarrollo que de verdad generan resultados en lugar de acumular cursos.' },
+  { id: 21, domain: 'recursos', text: 'Cuento con una red externa o pares de confianza para rebotar decisiones complejas.' },
+  { id: 22, domain: 'posicionamiento', text: 'Tengo metas ejecutivas a 90 días con métricas claras de seguimiento.' },
+  { id: 23, domain: 'posicionamiento', text: 'Sostengo micro-hábitos semanales que impulsan mi plan de desarrollo personal.' },
+  { id: 24, domain: 'posicionamiento', text: 'Aprovecho herramientas tecnológicas e IA para acelerar mi preparación estratégica.' }
+];
+
+// Casos prácticos (solo 3): problemática + respuestas en blanco + prompt personalizado
+const CASOS_ESTUDIO = [
+  {id:'lagarde',titulo:'Caso 1: Christine Lagarde - Credibilidad y firmeza en plena crisis',
+   descripcion:'En 2011 Christine Lagarde asumió la dirección del Fondo Monetario Internacional tras la salida de su antecesor en medio de un escándalo. La institución necesitaba recuperar credibilidad mientras la crisis de deuda europea tensaba a gobiernos, mercados y ciudadanos. Debía exigir reformas impopulares a países en dificultades sin perder la confianza de ninguna de las partes, siendo además la primera mujer en ese cargo y bajo la mirada de quienes dudaban de ella.',
+   preguntas:['¿Cuál es el dilema central de Lagarde y qué está en juego para cada actor?','¿Qué decisión tomarías en su lugar, con qué datos la respaldarías y cómo la comunicarías?','¿Qué situación de tu organización exige hoy esa misma combinación de firmeza y credibilidad, y qué harías?'],
+   q:'¿Qué decisión de tu entorno actual exigiría esa combinación de firmeza y datos, y cuál sería tu mensaje clave?',
+   crit:[[/dato|cifra|métric|evidenc|indicador/i,'Respaldas tu lectura con datos o evidencias, el sello del estilo de Lagarde.','Incorpora datos, cifras o evidencias que sostengan tu análisis.'],[/clar|mensaje|comunic|tono|calma|serenidad|confianza/i,'Reconoces el papel de la comunicación clara y la confianza bajo presión.','Explica cómo comunicarías el mensaje (tono, claridad, momento) para conservar la confianza.'],[/(^|\s)(mi|mis|yo)\s|aplicar|equipo|empresa|organizaci/i,'Conectas el caso con tu propia realidad profesional.','Conecta el aprendizaje con una situación concreta de tu rol actual.']]},
+  {id:'nooyi',titulo:'Caso 2: Indra Nooyi - Resultados inmediatos vs. visión de largo plazo',
+   descripcion:'Al frente de PepsiCo (2006-2018), Indra Nooyi decidió reorientar el portafolio hacia productos más saludables y reducir el impacto ambiental ("Performance with Purpose"). Esa apuesta exigía inversión y paciencia, pero inversionistas influyentes presionaban por resultados trimestrales e incluso por dividir la empresa. Debía defender su visión ante críticos poderosos sin descuidar los números ni la confianza de su equipo.',
+   preguntas:['¿Cuál es la tensión central entre corto y largo plazo y quién la representa?','¿Qué argumentos y evidencias usarías para sostener la visión frente a quienes exigen resultados inmediatos?','¿Qué decisión de corto plazo en tu área cuestionarías para proteger una visión de largo plazo y cómo la defenderías?'],
+   q:'¿Qué indicador mostraría que tu visión de largo plazo ya está generando valor hoy?',
+   crit:[[/propósito|visión|valor|sostenib|misión/i,'Identificas cómo el propósito se vuelve estrategia de negocio.','Explica cómo el propósito se conecta con los resultados del negocio.'],[/largo plazo|corto plazo|portafolio|estrategi|inversion|trimestr/i,'Analizas la tensión entre corto y largo plazo.','Contrasta explícitamente corto y largo plazo y sus riesgos.'],[/(^|\s)(mi|mis|yo)\s|aplicar|equipo|empresa|organizaci/i,'Llevas la lección a tu propio contexto.','Define qué decisión concreta de tu rol cambiaría con esta visión.']]},
+  {id:'gates',titulo:'Caso 3: Melinda Gates - Problemas demasiado grandes para resolverlos sola',
+   descripcion:'Melinda Gates impulsó durante años la salud global y la igualdad de las mujeres desde la Fundación Gates y, desde 2015, con Pivotal Ventures. Los problemas que quería cambiar (salud materna, brechas de poder y de oportunidades para las mujeres) eran sistémicos y excedían a cualquier organización. Para avanzar necesitaba convencer a gobiernos, empresas y organizaciones con intereses distintos de invertir y coordinarse alrededor de una causa común.',
+   preguntas:['¿Cuál es el problema sistémico y por qué no puede resolverlo una sola persona u organización?','¿Qué aliados buscarías, qué le ofrecerías a cada uno y qué datos usarías para convencerlos?','¿Qué alianzas necesitas construir en tus próximos 90 días y cuál sería tu primera conversación?'],
+   q:'¿Con qué 2 personas o áreas formarías una alianza esta semana y qué beneficio mutuo les propondrías?',
+   crit:[[/alianza|aliad|red |sponsor|socio|colabor/i,'Reconoces el valor de las alianzas como palanca de influencia.','Nombra qué alianzas o redes serían clave y por qué.'],[/sistem|estructur|escala|impacto|cambio/i,'Piensas en impacto sistémico y no solo en resultados aislados.','Distingue entre resultados aislados y cambios de fondo en el sistema.'],[/(^|\s)(mi|mis|yo)\s|aplicar|equipo|empresa|organizaci/i,'Conectas la estrategia con tu propio rol.','Traduce el aprendizaje en una acción concreta con fecha para tu rol.']]}
+];
+
+const X = {
+  rub: [
+    [
+      "Te cuesta definir un estilo propio y sueles encajar en moldes tradicionales. Identificas poco la herencia que frena tu autoconfianza.",
+      "Empiezas a cuestionar expectativas ajenas y a reconocer tus fortalezas, pero aún dudas al momento de sostener tu identidad ante la presión.",
+      "Lideras con autenticidad, reconoces tus logros objetivamente y distingues con claridad tu potencial frente a las barreras del entorno."
+    ],
+    [
+      "Navegas tu entorno de forma únicamente reactiva, sin mapear la estructura real de poder ni cultivar sponsors estratégicos.",
+      "Identificas a los actores clave, pero tus acercamientos a sponsors y aliados aún son esporádicos o no preparados políticamente.",
+      "Cuentas con una lectura fina del entorno, mapeas apoyos y resistencias, y gestionas activamente tu red de patrocinio directivo."
+    ],
+    [
+      "Las dudas sobre tu capacidad y los arquetipos del impostor te paralizan al momento de postularte o reclamar lugares de impacto.",
+      "Reconoces la narrativa del impostor cuando aparece y cuentas con evidencias, pero aún dudas ante retos de muy alta exposición.",
+      "Transformas la duda en evidencia objetiva de desempeño, pides recursos con seguridad y te sientes plenamente merecedora."
+    ],
+    [
+      "Tu trabajo permanece invisible ante la dirección o sientes incomodidad al compartir métricas por temor a parecer presumida.",
+      "Presentas logros en espacios formales, pero te falta una estrategia constante de posicionamiento e historia de valor ejecutivo.",
+      "Comunicas con soltura el impacto de tu área en el negocio, posicionas tu promesa de valor y aseguras la visibilidad de tu equipo."
+    ],
+    [
+      "Entras a negociaciones sin preparación estratégica, cediendo ante la presión o reaccionando desde posiciones rígidas.",
+      "Preparas tus intereses y datos, pero te cuesta sostener tu postura o desplegar alternativas colaborativas en escenarios duros.",
+      "Dominas la preparación con BATNA, desarticulas sesgos de género con datos y creas valor mutuo en cada mesa de negociación."
+    ],
+    [
+      "Los conflictos interpersonales o de equipo te abruman, llevando a decisiones tajantes o a evadir las conversaciones difíciles.",
+      "Pausas la tensión y escuchas, pero te cuesta llegar a acuerdos de fondo con compromisos e indicadores claros de seguimiento.",
+      "Gestión emocional impecable bajo presión, desarmas posiciones duras mediante preguntas poderosas y conviertes la crisis en procesos."
+    ],
+    [
+      "Sufres de sobreexigencia y acumulación pasiva de cursos. Te cuesta establecer límites de agenda y cuidar tu energía.",
+      "Identificas tus prioridades de desarrollo y cuidas algunos espacios, pero las urgencias del entorno aún invaden tus límites.",
+      "Filtras los recursos con estricta aplicabilidad, proteges tu energía ejecutiva y sostienes redes de apoyo entre pares."
+    ],
+    [
+      "Careces de un plan estructurado a 90 días, funcionando por urgencias del día a día sin micro-hábitos consolidados.",
+      "Cuentas con metas definidas, pero te falta sistematicidad en el seguimiento semanal y en la integración de herramientas como IA.",
+      "Hoja de ruta ejecutiva en marcha, seguimiento riguroso con métricas y uso fluido de asistentes de IA para acelerar tu estrategia."
+    ]
+  ],
+  acc: [
+    [
+      "Haz un inventario de 3 logros recientes y redacta tu declaración de identidad ejecutiva soltando un mandato heredado.",
+      "Elige una creencia limitante sobre tu estilo y practícala reescrita en tu siguiente presentación o junta directiva.",
+      "Padrina o mentorea a una profesional de tu equipo ayudándola a identificar y desmantelar sus propios moldes."
+    ],
+    [
+      "Mapea a los tomadores de decisión de tu área y clasifícalos en Sponsors, Mentores, Aliados y Bloqueadores.",
+      "Agenda un café táctico de 15 minutos con un Sponsor potencial para pedirle su perspectiva sobre un proyecto estratégico.",
+      "Construye una alianza transversal entre áreas presentando una iniciativa de beneficio compartido antes del comité."
+    ],
+    [
+      "Identifica tu arquetipo del impostor dominante y construye tu lista de 3 evidencias objetivas e incontestables.",
+      "Reescribe una solicitud de recursos o postulación eliminando palabras de minimización (ej. 'solo quería', 'tal vez').",
+      "Postúlate o levanta la mano para un proyecto de alta visibilidad ejecutiva aunque sientas que cumples el 80% del perfil."
+    ],
+    [
+      "Redacta tu promesa de valor ejecutivo en 1 frase enfocada en los resultados que generas para la organización.",
+      "Envía un reporte mensual breve de 1 página con métricas de impacto directo a la dirección general.",
+      "Participa como vocera o ponente en un espacio relevante del sector para consolidar tu marca personal."
+    ],
+    [
+      "Completa la hoja de preparación de negociación (Intereses, BATNA y 2 opciones de valor) para tu siguiente petición.",
+      "Enmarca una solicitud presupuestal demostrando el retorno de inversión y el beneficio directo para la contraparte.",
+      "Lidera una negociación distributiva compleja transformándola en un acuerdo colaborativo de largo plazo."
+    ],
+    [
+      "Aplica la Pausa de 90 segundos de regulación emocional antes de entrar a una conversación de alto conflicto.",
+      "Reúne por separado a las partes en conflicto e indaga sus intereses reales usando preguntas poderosas.",
+      "Establece una matriz de resolución de desacuerdos con revisión a 7 y 14 días para tu equipo operativo."
+    ],
+    [
+      "Aplica la regla de un 'no' explícito esta semana para proteger tu tiempo enfocado en prioridades estratégicas.",
+      "Audita tus capacitaciones actuales y elimina aquellas que no tengan aplicabilidad directa en tus metas a 90 días.",
+      "Establece un círculo quincenal de práctica y rebote de decisiones complejas con 2 pares directivas de confianza."
+    ],
+    [
+      "Consolida tu matriz de 3 pilares a 90 días y define la primera micro-acción de menos de 15 minutos para hoy.",
+      "Utiliza los prompts de IA para simular una conversación difícil y afinar tus argumentos de negociación.",
+      "Realiza tu auditoría de avance a los 30 días y ajusta los micro-hábitos con base en tus resultados reales."
+    ]
+  ],
+  order: [17, 21, 18, 20, 15, 8, 6, 22, 14, 2, 16, 4, 23, 19, 5, 13, 1, 11, 24, 7, 12, 3, 9, 10],
+  crit: [
+    "Distingue la creencia heredada del verdadero estilo propio. Propone acciones concretas de autenticidad respaldadas en logros reales.",
+    "Mapea con precisión la estructura formal e informal de poder. Define una acción táctica de acercamiento con fechas y nombres.",
+    "Identifica el arquetipo del impostor. Reescribe la narrativa con evidencias objetivas de impacto y métricas de negocio.",
+    "Aplica la estructura de negociación colaborativa (Intereses vs. Posiciones, BATNA). Ofrece 2 alternativas viables de creación de valor.",
+    "Pausa la reactividad e identifica los intereses no declarados de ambas partes. Diseña un plan en 2 tiempos con indicadores medibles.",
+    "Elimina la acumulación pasiva de cursos. Establece 3 límites ejecutivos claros de agenda y energía aplicables de inmediato.",
+    "Abstrae aprendizajes directos de las líderes referentes y los adapta con precisión a la cultura de su propia empresa.",
+    "Formula metas SMART en los 3 pilares estratégicos con micro-hábitos diarios y prompts de IA integrados para el seguimiento."
+  ]
+};
+
+const PHOTO = "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAASABIAAD/4QBMRXhpZgAATU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAA8KADAAQAAAABAAAA8AAAAAD/wAARCADwAPADAREAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9sAQwACAgICAgIDAgIDBQMDAwUGBQUFBQYIBgYGBgYICggICAgICAoKCgoKCgoKDAwMDAwMDg4ODg4PDw8PDw8PDw8P/9sAQwECAwMEBAQHBAQHEAsJCxAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQ/90ABAAe/9oADAMBAAIRAxEAPwD9ydX/AOPdvpVMlHzr4lU+cxzxmvOludK2PSvCbfu7Q56rXdHZHOz1Fz+6rUg828T4KtmuapsbI848N/LrEv0rOmOZ7l4ex5Bx612IwN+bOymNHlviorgg1yVDaJn6NgWnynIq6exEjtfDWDM5xzWyMzuTnHpVDOH8UnFuxNYVNi4mDpOPsw20R2FI7rw+P3R5zzWyJRxmuO39qkDoDWD+Is3dI4vPwrZGZuamSYG+lN7FLc8PmwdX9w1cK+M16HaHlF/Cu17GB6VpeDapj0FUUi8/SgbPP9b5u48jvWb3BDNox1rQg6fQ/wDV9aBosarkJx2oBnJGPzWIxSYiaOy5qCrHY2EPlxACrTGkct4vh8+BY/U1lU2Bbn//0P3J1b/Ut9Kt7EI+cfFEnlyuBzk158tzpiekeEHzBZnsVFdkNkc7PV5OY/wrUk8u8UhlBOa56hrE4Hw+y/2vIB2FZ0xzPcPDjfuiD611IxN65+4cVQHlPigsAcnqa5qmxqilohzaGrp7EyOx8Mn/AEhhmtEQehHoKoZ5/wCLpoYLctIQu7ge59BWc03oikcPpuvwwoITE55IyQQOPfpWkYJLVku7OitfF82mll+xb04OS+3g/gc/hVqKFqU3u5NXuzexxhVJ6Bt3vwR1x+dZSpu9yrnV6QyNdZU54FMRuasSts30oewI8LYY1jBJ5auGPxmz2O65KqK7XsYHpmlDFon0qikXmPBFA2ef66CblPrUPcER4yAAe1WQdPooxHQNFnVR8lA2czbgmVqTEjVjXJOKgs6S3GIxQBy/iQEmMDnmpqbCW5//0f3G1bIt2OeKt7EI+dvE5G5+MnNcE9zoWx6F4Oz9ms8eldcNkYPc9alB8v8ACtSTyzxc2EOTzWFQ0iec+GpM6xIvtWdMqZ7t4bOYTk966lsYnR3PC0wPKfFxAWuapsaozNBP+iGtKexEjt/DeBcMK0RJseM/F2leB/Dl34j1hiLe1XO1fvOx6KB6mhtJXZUU27I/MTUv2nPF/jj4g/ZvDMMdxBGSJLZQR5UR6M79VPuO/qK4qmJjBc0j06WElUfLHc+mLDxHaTWilY5VmZc5Y/OT6ZJP8ua4lj6T2Z6H9l1lujdsNcvJlEUkEnm5/dlsd/XBx+grWOYQInlk0ro6Oyt9UP7yENa7uqZ6+hB7Efj9a0+vxZn/AGe1ucL4s8e+Kvh5d/21q1tJc6YxCG5hwXiJz94dAD75Bqo41N2kE8vfLeLPYfB/xJ0bx/orXFhITPHGrsMbQyt0cA9jjkdj3Iruumro8aUHCVmcyWB1jgd64o/GU9juM4QEe1dxgel6Vg2qEelMpF1u9AzgtdyLhD71LEiENgDNUSdNoxypxTGi1qmPLpAznYB85pPYRqJ6dqg0Ogtj+7FNAc14hxvjz61NTYS3P//S/cfVeIDnnitCEfOPit28+Qg4FcMtzeOx33gqUm0sj6iuqGyMXuexTH9z68VoSeV+K1UodwxWFTY0iebeHSo12QJ0wainuOWx734a2+QSOua6jI6G6JKUAeS+LSGQgjpXPUNImfoRH2I4rSnsRI7Xw23+lNWi6iPl39sjW9Vv7PSfAuiITPdHzWYk7BvO0FgPQAmuPEz5IHo4Olz1LHjHwt+HmjeErMW1kgZmO+4lwN80nqT1wOw7CvisRUcpXex+i4WjGEbLc+o9ItLKa3LIqDb0xipU4SRdSMos66yghhTcgAAB6etUmtzmk29Gads5ncqvIHFdVOVzGceVXZq3mgW2o2b219Gs9vMhV0cZV1IwQR0Nel7G61PM9vZ2Pm258G6r8M9fg/4RgY0pyWjXJLg7txiJJA2YP5fSu7C1Gn7OR5eMpRlH2kT1GKYT6nHcKMCTDAfWupK0zwuh6Ef9Wv4V2mHU9M0rAs48elNlovN0xSGcLrv+vHNSySkOQPSqEdNox68VXQEXdVyU4pIbObhJ3kUMlF9GOeelZso6S1OYxTSLOS8WSeXEjZxg1E9hLc//0/3J1Y4hI9RWvQzPmrxiSJZNoHFcM9zdHd+B2zY2JIrqhsjGW57RKcxZ6cVoI8r8WEhTnkGsKhaPNPDm3+3Xx3BqKe5Uj37w0o8sj3rq6GR0FycIe9AHk/i3LRNn5RXPUNImV4fXbZnByM1dPYiTO28N83ZFarqSfLPx1kW78bXN6F3G0xCD6YUD8+teLmL9xH0eVL32cjoaSDBj7AfjXxzjzPU/QqclGJ7/AOGbaOaFYgdpcZ6V0U6UX1OLEVZbnWbFs0KnoR/WtfZtHBz8xs6Tau5L7QATn867aNNHPWq2Wp1kcZSPLD8O1emtEeRJps5nU9Mj1UCKQDC5IbHQiih707irvlps85tLSSw1FbSVcGMnH+7nj9K9N/GfOyPRP4V/Cus51uen6WMWqfQUM0iXDSBnC+IB+9UgVLJKqDCCqF1Ok0YYzVdARd1T7lCGzn4MK3NDJRbWRVbOKhoo6O0YPGCKNi0cZ40P+jVE9hdT/9T9yNWJ8gn2rboZnzN4wDeZIQeprinubI7zwGQ1hZYPSumnsjGW57bIR5XPpV2A8m8YNhDgVlMtHmHhtydcf6His6Y5H0D4aZjESDgZrq6GXU6W6+5Qhnkvi9sRH2rCoXEydAb/AEEk1VPYzkdl4bci9wR1rVCufCP7TvxZ8JfDfXJY/GFw9sdUvp1t0ihaSSeSID5EA74YdSBzXmYqhVre7BaHv4GvSo+9N6nz2P2jNV05YW0/w5GpYfLDNcs90R23RwxsF+m4140sPhoLWo36LT8Wj6H63Wloofe9fwR3/hr9q7xXoijWfGHg+ax0uLPmSxFxJEmOXMcqrvUDk4OcdAa41RpVZOOGq3kujVvxu1950OtUjC9alaPdO/4Wv9x67/w2l8BdV0m81jRfES6lNp0RMtvBDMXLysqxKu5ACXc7VGepFQ8NiLxvGzd+qIWJw6ulO6+Zkj9p74w6eqS2Xw3dobgbhFLPvuIwf+eixfKpx1XJI71tQxuAg3CVe78lp8m3qRXwuJmuZUtPXX5pf5nrPhL9pLXdRMn/AAk+gR26JywgeRJUGOSVmUAhe+Cce4r3VGnUhz0238l/meQ6c4Ss1b+vQ988M/EDwtr2oT6VDdCK9iCM0E2EfDglCpBZWyAcYJ/lTw1OVudLQ5MTOLXLfUoa6kf/AAkUEqMDviU8fU13N3kjx2raHQA5Va6Xsc3U9Q0viyQ+1Jmsdi22aQmcR4gx5inpzSYjPQnYDVk9TpdEPH1oYI0NT+5QipHNR8MTTZKJweago6fTgTFSbKRyvjKItbYz1qZbC6n/1f3G1XJtT710GZ82+MfvSYrimjVHV/DyTNjbc9GNbU9jKe57tNnyfwrYDyfxaw8tj6VjUKieVeHDjxC/PBU1nDcctj6I8MLmAn1NdXQxW50twcKc0Is8j8ZvtgYjnNYVCkY+gH/QM9KqnsRLc7PQpFhuHmf7kalifYDJrRaXJW9j80fj9YaL8WdeuPiNo88l3pUaJJa2kqIRHNbSbp3RlZs78ZyMHPB6V4/16DnCUXo7r79D65ZdOlGdKoveVn+p5pofw5udTW4XRtVk0NHj2LcWyhrli3Il80/dBHQDGepNfB1qzi711e3Q+yhh1JWovfqc18RfBUXg/wAN3LSa3Pqn2eCSSeSVSXlOBhWZmYklgAuOrN3zXZlmLUq75YpX02OXF4Z0sO+abb82fW3gT4K6NZfs3abpQ0iJta8NpZ6qGigUzvc2zrPchWA3FmXzEAycnA9K+npz9pVqT2vdX8noePXoujQpw3tb71r+Zzvj34SnxZfQG11250u2u2hurG8tpH2tE3zqVZXXcsgYFs8/TpX59yrB1XCpD7z6p3xdFTpTa9D10fDq88MeGzqd/rR1ez061aSZLlWMzlFOXSblst0CHcOgBr6bDtpL2LtrseJKaScat799D0OH4OyXmi6XevevZ6pBHA8q7AymTaCwYcHIPGQcjH4V71CpVWIdTn0b2PGxDpSw3sZU1dLfqmegX1tc2+oWbzKoHlJGSrZy6D5j68knGea9CM4yqNR6HzlajOEVKXU6QH5ARXezzT1TSm3WUeeu0VLNo7FwntSEzjNfALDigRkA5QVaIZ02iDHTpQ9ho0tSHy9eKSKkcyMAmmyEPB5qCzrdOIEIoaHFnJeMZilvQ9iXuf/W/cjVTi3I7YroMWfNni4fvZSOK457myOh+HRDWkIzwJDW1PYylue/TNiHHtWwzyPxcxMbKe9Yz2HE8p0AKPEOVPY1ENxy2Pozwsf3BHvXSZI6W5HyEGgs8f8AGEm1GUHisKg47GR4fbNi2fWrp7ETOz8O7ZrpoJOVcFSPUNwatIlO2p8B+GtCt/DkTeEYk2ppssqsTx87uXf9Tivz1Qap8n8rsfrFet7Sv7b+ZJmxB4BvbQ+Zod39ngYkrFNDFcRx57RlwHVfQbiB2GOK58RVhN81eCfnsd2FoyirUpteW55frnhibVPF8EWuX39qDR3juHgCLDbRyk/umKL/AKx15YBiQvXGcVWBrU3zOjBRXe92/IvE4RrllVk5Pov1Pv74X3NnJpyrbyKWiXoD/nmvdwteFRtdUeHmNOcErrRnBeJPDFt4b1hINI1WbQbDVZpGjspliurJZs7n8lJAWg3k7titsznAHNcOPxFOM4+2ipJ9X+tv1OrLsLOcJOlJ3Wun/B/Q9H8LfD5Lh4bvWb2bUlgdZViGyG33ryrGONRv2nkBmIBwcZAruwnK1elBL0PKx9WUdJSv6nqN0qQqI1yw55PWuhe7NJHj3cots8x1DSraz146tagqdZEM0i9MPCnllsdi3GfpXPl1Fe3qYmO07aeavc2zXFSlh6OEl/y75tfJ2aOjJ4wK+sPjz1PRWzYx567aiRrE0W60gZyGvDPOKYjCUjyxVIhnTaKR0oew0ampKSmRSRUjmDwTVGYhbpU2A6nTXJjAPpSZaOM8cOVt6iWxS3P/1/3G1MZtic4xXQYs+afGTESS7Vrlnuao1/hnKWtVA7SmtaexnLc+iZMmD14rUXQ8h8Zk+WWJxisplRPJ/Dz41/BPUHFRDcctj6S8KHMLDI610GaOkvmxHx1oKZ454wBMJBrGoVEytAOLFvrVQ2M57nZ+GX/4mGQM45rVEnx5470g6D478SwwymRri7eVQeQu7BAz9DzXwmNtTdRLv+Z+m4aftIUZNdLfcR2eq6imkC4wW4O3k4z9ea+FxU5Sly3PtMPOEVzHkGq6V/bkk88sjWskhBYo5V8f7ykHjvXr4GiqdOzM8TiVJ6HrfgHw8dMfTYJb+6ljmEgmxO2McBfu4wcZrqpQXtObozCtXfs2ux7l4m8C6TJ4Yl0mxBeGL94gMrO4YfNkO7E7s9ya9XGYOm6DjBHjYPMqirqU3Z+g/wCE3ijVktjo93K0phG1WIIJX/aU8qw7j8uK8PLMROnJ0bnbm1GjVSrJanucEjztEG4JI6+9fXU5N6nw9WKV7HnurytH4hh03eZBZKV3HqS53H+leng6Xs48tzxsdWVSpzJW0Nosyvg9MV7J4x6l4cfzNORvwqJGsTbakNnEeJJHUDaeKroQzGgcPGvriqJOq0Pgn3pPYpGpqX3aSGzmnIHSqIKTudwoA63SchOallI43x5zb4HWs5bFrc//0P3E1QA25HqK6UYM+a/GZbfIoPrXLPc1jsXPhcwEbL6S1pT2InufSkrgwD6VqJ7HjfjPOxgelZz2HE8k8Pv/AMVAMnsazhuVLY+lPCZJhPTrXT0MonUXnKGkUzx/xgc27nOKymVExfD5/wBAOKqmtDOe52fhk/6f1xWqJPP/AIw/CnTUi1D4iWV1c/aYyryW+VMGJWVZH+7uyBzjOBzXy+Y4KLjOsm79uh9jl2YzvDDSSt36nhFnbJ/Z2o+Hrpd0U674WBwV3cjBHIr8+dHnd2j7qNZRaXU+dL34e+IrPxtHqtlrFze6TIP39jNNtA4OGjcDIwcEqfwr3qEI+zs9Cq6m5Xouz9Nz6q+HNja2aw211ZzzsWbcEvRtH93GUDfrmuyhTgpq7TRnXnjXSbckvl/wf0PQvEXw91fxVNBNHqV1oOm2rF2jtbljLcjbgJI7AgJnJIXk8c9a7K2FTi3zfieJQxHJJc/vS7WSSLXwu8Ey+F4dUuLuSSeS5uGcNK5c7QAByfavnsLhnCUqkkduPxany04nsdxbyCGO8jcr9mZXGOVY4Pyt7YNfU0cL7aN+a1mn/wAOfJVcWqLa5b3TX/DeZ5rJcveeIpLiX77nP9K9unGzsfO1Z8zbOxf+9Xcch6V4aGNPXjFTI1idA1SNnG+IoVkj68irWxDOat/kjApknXaLjg5pMpGvqWNoyaSGzmHI61sQUJPvA+9ZgddpOfL5qWWjjPHjbYM1nLYa3P/R/cTUz/oxx6V1IwPmTxqzGaQjpXNPc0iWPhi486RV/wCegq6ZMz6buOLcD2rZbks8d8ZMPKbB61lUKieOaGSviRM85zWcNxy2Pp3wmf3BHvXT0MUdNdnC80kWeN+MpNyMO1ZVComJ4fbOnt7Gqp7ET3O18LuPt+K0RCN74p+NPCHgPwDqniHxzKY9JEYt3RcGSd7giKOGJSRukdmAUevPQGpVPnfKdCm4PmXQ+GL29l0PxK2iaidtxZsbdgTnPdGz3BWvzqphnSqypSWx+j0cSqkI1l1OkudLtLopPIyoZCGw3P4Cud0pv3Ynv0qml2db4QsY7e8aZtq7ip6cY7cda1pUJJ6o0xE7wsfQVpcrPEtpGuV4G7GOO9e3HmceQ+PqpQbmzUDw2pWDIGzk4/pWsoqMeU8xzcp8x0thbPqOiX1uVzIzEp2+baCo59+K9XC6QPJxi9/TsfNfhfXrDxKbfW9LkMlvc7sZGGVkYo6MOzI4KsOxBrtcHCo4y3POunG6PT5GwM10M50eo+HWzYxgelRI2ibzd6gpnKa6cRk9atbEM5aM4TFMk6XRfem9hrc3NTxszUxKZzTDcfrWpBTdSGFZgdZpfMeallI4rx2MwY7VEtiluf/S/b/VebYkHjFdaOc+avGmFkfYema5p7msSP4WyM17Mrf3hVUyZn1HcE/ZvwrZbkHi3jFwIiDzWdTYqO55BoTD/hIUJ461nDcctj6c8In90ee9dPQyR1GoEiMmkijxbxczeU4PesqhSPJ9f+LPw4+Fvh+bUvHfiC00lIxkRSSBrhz6JAuZGJ9lralCUlojOb1PgP4m/wDBT238L+KLOy+DGh22tWHlF7i81VZoSX67Ioo2UgDjLMeSeBgV1qik/eZF+p8gf8NE/E/9qv8Aah+Hd143uwLWPWdOjtNOtQyWdsqTq7lImZsu20lnbLHpnAArZWi7R2Bq61P2D/ai8K6jYR6b8R9IjZ4YCsGoCMfMsTHMcw9djcN/sn2r4nNoOLVdLbc+yySUal8NJ2b1T8+xwGjeO7e4s7Sa++U4A3gfI3bPsfUV8rKpPenqj7Wk1B8tTc9c0Tx5ophWbzAr5wQ3GAT/ACojWmkro6aijLZntumeNLGS3WPTx59wwwoQZwPc9q9ajibnyuJo66nR2sTWkB1jW5hFtBcgn5EUfzOK0lUsuZswpUuaXLFXPRPhvrcPiXwnB4lt0KW+pvJNAG6mEMVjP/Agu78a9zBtyoqT66nhZjBU8RKne/Lp8+p+KPjr4663+zP8fPiFoHhyKLXNAGry3DWc7Mgie4xM/lMv3GBkKtwQcAkZr7n2Ea9KE5aOx8u5OEmlsfUfwv8A24/gv8SLmDRNXuJPCWsTYCw6iV+zyMe0dyvyc9g4U151TCTj8OpcZp7n6MeF5Y5tLhuYWWSKQAq6EMrA9CGHBH0rzJq2h1wOgY85qC2cxrmPJPFWtjNnJREFcA81ZJ0+iA7+TxSew0bWqEbRnvSiUzC6jpWhBVdcuBWYHXadEqxAipZpFHB+PB/o+amWwluf/9P9wNSGbQ59K7DnPmbxkzea+4etc09zSJX+F8gOpygDHIp0yZn1TP8A8e3HcVv1JPEfGnCMBzWVTYqJ4/ort/wkEWfes6e457H054TkURnPBzXX0MkcH8cvj/8ADD4FaD/a/wAQ9YS0klUm2sosS3tyfSKEEEj/AG2wg7tWkKUpbA5WPwl+P/8AwUC+J/xQluNG8CKfBmgOSo8h9+oTL/00uB9zI/hjA/3jXaqEVvqZ8zPz+vdRvbh3vb2eSe4lOWkkdndj7s2SfzqpSstASuzDvyVlt5geG3D8xWU3qmXFH0X+xW8j/tSfDlUVWI1QZzzhfKkyfqByKzgOWx/VpdaHY61ocmnanGsttcxGORG+6ysMEHPtXmYiCmnGWx00ajg1KL1R+eOpfDHUvhd4kuPD98oudFuXeWym+8rQseBnsy9GHY89CK/Oa2GnhqvI9nsz9boYmnjaHtI/Et15/wDBO20vwFZXNul3acgfMQDwwzxXNWlUUrdDmVloz6T8MeHNO8O6cGGN5+Zt3QcZr06UVGOp5NSUqk/I8P8AjB4u1jxZc23w88J7pLzWJFtUCdRv4ZjjoFGWJ7AZrz6s5YiqqFM+lwdGnhaMsVW6I+8NA0iz8L+HtP0K1wlrpdtFAp6AJEgXJ/AZr9GjGyUUfklWbnOU5bt3P5ZvjB4jg8X/ABM8Z69BKbiDUdTvpkkbktG0zbD+K4r72mrJR7I8GT1bPnzTg+p64qv92L5cdqiOsgeiPXvB37Q/xV+E/ieyX4ceKL3SY7aQFrZZmktZQP4ZLdy0bKe42/iKzqxhN8skOHMldM/W7wl/wVR+HxsrWx+Ivhe/stYIUStprRTWzf3nAldHQeind6ZryqmX2fuy+86Y17rVH6FaD448K/Enwta+LfBWpRappV4oKSxNna2OUkXqjr0ZWAIrzJ05QfLJam/MnqiKEbM5POakDp9Fk+ehjRv6p91amI5GGBwK0JK0mAwNZgdLprkx1LLRxHjnmLBqZbAtz//U/b7UXDWR7cV2I5z5o8ZgGaTHXFc89zSJS+GGV1WVT3INFJEzPqiY7bcZ9K6CTxfxpwj+9ZVNionjOi4TxBG7MAoyTk4AA6msoblT2Pjj9on/AIKETeEJbvwR8CnguLuItHc606iWONwcFbRD8rFe8rZXP3Qete3SoaXn9xxuXY/Inxb4w8TeOtaufEXizU7jVtUuzmS4upGkkf2LMenoBwOwrut2MzjJU3Cs2WZlzG/lN7VlJKxa3KiIbzTww5aFs1i1eJS0Z2fwU8fL8KvjD4S+IE+fs2i6lBPOFG5jBu2zADuTGzYHrXIpWNmr6H9Neg+J4fHWlQ69o+qf2raXym5s5lcmOa2flNo6DA4xjIxg85r5CU6jm+fc9pRikuVHRWmi2OtaPNpmsI/2cOXjK/filxgsvYHHUHhh17Edc6cK8I05L59mVh8TUw1R1IP1XRowY7ebwVcpYXjiZCodWXhXUnhl+vcdjkdq+VxVqMnSq7rbzPuKLWJgq1LZ7+RheKvidIPtUUBwXC7VBztz8vA9a8mWIlNvl6nsUMHGKTkeyfCf4UX/AIQ0+88c6/J/xUGrQBIoiNxtIn52g9fNfjdjp09a+0yzAOhBzl8T/A+GznNFiZKjT+CL+/z9Ox88fH79qPUPg94X8U6DfStqY1Kzm0+xYuBNFfTRsu5W/ijQHLDqMcHnFfS4NSlVSl0PlKyShzI/CuzlEkMsrcEjbn8K+2g73Z4kji/D8whu9T1D+GEOQfwx/Os4PVsclokcNpt0t14mhmnOV3lj/SuOEuarc2atA25oZ7zxB5Exw1zJ5jc/dhTp+ZreV5VLP+kZLSNz6P8AhT8Y/H3gDXLjWfAGt3GkKgCyCJ8xTheAJYmyjjsNwz6GulxhVVpK6MruOqP13/Zd/bHg+Muqr4G8Y2kNh4gkVza3NudttemMZdAjElJAMkAEq2DjBGK8TE4T2a54PQ66dXmdmfobouN9eSzqOl1M4RD61ERsxQqnJrQkpSAk1mB0mmDEfNSykcV42x5ftUy2KW5//9X9vb5c2ZPtXacz2Pl3xtKyXTj3Nc89y4sqfDGYtrki/SnT3FNn1jMf9GGfSthHjHjRiUJxwazqbBE/Hn9r39pK3sG1D4UeArwm9dWi1S6iJHlrnDW0bDGSf+WhB4Hy+td+EoW9+XyM6k76I/L0zHzEZzlX4r1TnHyRspaMD5kGR7jrQxgirPEl1H0cYb61O6uPbQq3cCC2dgOMVnNaFrc57QXAuZLV+knaualroXIqahp5jeSFhhlPB/lWVSHQuL6n3h+xB+1Evwn1+H4e/EC9aPwdqk37i5bJ/su6c48z18hzxKB0++B97PlVsMqmq3OuFXl0ex/Q9p2ntHCmqxbZY5VUyqhDLIpGVkQjg8HIx1H4Vw+xcTbnvoU/iJ4AtfFXhQvp1z9mu4dz2k38ALcmOQDnaSMgjlTzg8iuDH4COKgub4ls/wDM9fLMxlhKj0vF7r9V5mf8L/2cfDuhWum+KPGEsuo61tSd4y4+zRP95VCgfOVPckgnkCoweWU6SjKSvL8Drx+d1qzlClpB/e0e0+ONZh0bw9d6xe3CWEMEbsZZWCpDGqkvIxPAIUE57CvpYLsfJNn8wf7Qnxab4v8AxEutR0suuhWTNBpyNwzRg/NM47PKfm9hgdq9zDUFTVluzlq1Od36HiWtagNOsVtoz854H1NepKXKrI5N2ZLp/ZXhWVzxJccE/Xk1D92ncN5HFeD7YXOovcyfciBJ+lcmHV5XN6mwlpqLy3ep6mxO6Y+Wnso7Uqc9ZTfUGtEjttMiuntrLRbdjEtwpuLlx1EQOFX6sc/gK7oX0ijnlbc9D0DXZ9O1e2u9FnazGmMrpNE2xkkQ5XYw6EEZyK601t0MT+g39jj9oe2+Pngu4a8wviHw5JHa6kBgLKXXMc6jsJMHcOzA44Ir5bF0VTleOzPSpS5lrufZupjdEgNedE3ZkpirZJVmHzZFQBu6cTsqWUjh/HLhYDmlLYfU/9b9vr35rQgdMV3Lc5nsfLfjrb9rbPXmuepuVEzfhiQNebJ5wKKe4pH1tKB9mBHJxW/UXQ+Zfjn4/wBD+GXg7UvGXiKTy7XTl3KufmllPEcSerO3HsMnoKfs3OXKhKXLqfzCeJ9XfXdau/EBGHnnlllUEnCzOXznqdhOD7V7r6W6HKZUkG+FgvbpVNCRcjPn2kd0Pvx/I/07Gi91copeG2Dy32mvz5Tbl+jVjResolz6MtajGYdOlLDrgVdRWixR3PPIZDa30cw45rgjpI3eqPQNWsFurSO+j53DDH+Vd1SHNHmMIys7HEGEwSHcMq3XjOPevNlGzOlO5+0H/BPH9sq10d9O+AnxfvQLByItA1OduIHb7tnO5P8AqmJ/csfuH5D8pGCcHJXW4rn7XW+nC41Mafylu5MkidiB1GO2TXlNWZ0J3O7mZIyF4CqKEgufhp/wUZ/aZbWtbm+Cfg69LWlkwGrvG3ys4wVtuOuOGk/BfWvYw9K1pM5pz6I/Lexj+zxtdTdT0r24K2rOOWuhxbyNq2tLGTlUbNZX5p2KtZGh43m8qxitV6KOavEO0LE01rc5zwri30PUbo8Hbt/PisKGkGzSpq0c5p8TM6QD+Nv1Jrmguho9rnqLXZnnuNN087XjEcUrjsAMYHv1/OvVUtWonI13Lpu4I2NhEdlrZDfcSZ4JXpGPXHVvfjtV3Wy2Ja6n2d+wb8Wh8Hvinbax4guRY6D4tdoNQ8zISKA/6mZvTy3wSeylq56tF1KMrb7ouM+WS7H9HeoSI9vFIjBlYZBByCCMgg9wa+UiekzOiBIAq2SVphhsVAG1YfdpMtHC+Of9VUy2F1P/1/28uMtYn3Fd3U5eh8uePf3d04HJrnqFxMb4ZO//AAkBLeg/nTp7imfXUrYtB24rfqT0Pxi/4KjeLHiTwT4NgnwJXu9QmiB67QsMTEfi+Pxr0cMt5GE+x+N7eZbTC4QZU/eB9K6XdO6EtdDZSNDFvh5jOMD09v8ACt07q6J20GW2yCfaW/c3A2n2JqU7P1Ha5h6PI1r4umhf5SyYI91NctP3azRrJe4dJ4mAjtQijG85rsrLQyhueYXcZxnuK8to6Uz03wpINS0qSzfkhTj6ivToPmjZnLU0dzJudMEgdMYI/pWU4JlKTMzT5BHIbW442n5W/un39v5VxR3szd90fuZ+wz+3ZZpJZfCz476oIZo4Y7TStbuGwrKD8sF5ITwwGFjmPBHDnOCca2HcvejuOE7aM+gf23f20tK+D2h3HgT4fXkd3421SHiWMiRNNgkHE7kZBkYf6pf+BnjGZoUPtSHOetkfgBEbjU7mTUb6Z5ZJWZ3d2LO7sdzMzHksTyTXtQjfVnLJ2JdVuNkZiTsK6JPoZo5Pw0nmarJJ6GuejrNsuWw/xjmYuf7tXX1Qqehh6apTwnf8n76/zrng7UmXL4kZ/h1ka9WeT7sALn/gIzWVF63ZpPaxv2d62laUmGAvrstKzf3S5yzn6dB710Qlyx82ZNXZq6LYrqCxJICmnxHcEJ+aZuu457Z/Ot4a6dDNq2p6l/aKoHSJfOuXjMccQ7AjGW9B616CemhztH9Jf7Ltl4u0/wDZp+Htn44laXVotMiBaQ5cwZP2fd7+Ts/DGea+QxKiq0lH+n1PUh8Cue8x/KOtczLKk/XJqANiwPy0mWtjhPHZ/ccdamWwLc//0P29cFrAHPau7qcvQ+YPiGNly49awqFROb+GsqnxFtA7f1op7hM+sdTvrTTNHudT1KZba0s4XnmlbokUSl3Y+wUE10JXdkZn8t/7S3xtuv2gPijf+N9nkaeB9l06E8GOzhY+Xu/23yXb3bHQV7cIcsVFHM3rc8ISIMhilHX860t0Y7jYFayl8mX5omqF7rt0LeqM/wAQRvaxmaJvkk5BHT2NY11ZXRcNdGYlrc/a9f03UV63UB3f76Ha38gaxhLmqRl3RbVotHa+JvmSMegr0K2xzxOCmTdnPPavPaNkbHhG9NlqPlHoTW2HlaRFRXR3Os2ohuBPCMJLyPTmu+rGzujCLOQv7UeYssfBrz5w1udMZdCaO4nhiCBcqeAMdB7f4UtUgtc0nvVuSHaQyFsHnJI9Bz7dvSrTTFaxvWcrKgY59veu2BizN1WbYjsTy1RNjRX8LLiSSU9+9FBa3CYmt/vDKDzk1dTW5MSqLc2/hK8DDG4qf1rBq1Jl3vJHG6TIsOmX90/C7CmfZiAf0rig7QbZu9WkWbJvtbHUdSOyJsbYz3A+6D7e1XBt6yJatoj0DTvtd5h+beEjg/xkD0B6fzr0Yd2c78j03RUtrYBIFCs/U9SfqetehA55aH9LX7OfiGLxT+z14E1KKTzGj02G1kz1EtpmFwfoU/Kvk8XDlxE18/vPRpu9NHs8QO0ZGK42alO4470WA09PfK8VDRSOH8btuhqJbDW5/9H9ukLDTx7LXe9zkWx80ePgHun3D1rCoXE5b4dqieJBt64/rSp7jnsd1+1Xrun6D+zZ4/vNSvEshPo9zbRO5xvmuF2Rxr6s5OAB/LNd9FXqKxhJ6H8sT2lxDIJrb54jyMdvY17Dg94nOmtmdDZeXfKA6lJV654zW0GpaPRid1sab6akq7ZRx+tW6ceolJnP6xpxk0m6s423yIpkj9cjkj8R+tctWF4OJtGWqZ5n4XlE8+mKesTz/kxX+teVh3flXqdNRbs9O14705OduMc9q9iociOOZBjdiuRmhQQmC7SZOMGsdnc03Vj2EuNR0cSLyyAGvb+KFzi2ZzkMYuIsSDoea5TUmuETyRx071EloNGZKocLIvB/nisWjQuW9/s2wuvfrWsJ9CHEk1oAxKw4BrWpsREfojCGI+h5opaBLUS/iM0oYdDVT3EiXXnjtvC9whwC4AH1BrOtpSZcPiPJ5JVh0S3tjybmUEgdSqnOPxNeW3aCXc6ftHU6XZtuW7vMFx9xP4U/xPvXXTjbV7mMn2O2tb2MhguQ3513QMZM7bSXkMse0Zyetd8Tnkfsd/wT0/aLstcTUf2dtRshBPoYlvNNvEJK3KORJcROD0kjZsqRwVyCAV58PH0rzdVdLJnXQlpyn6kryMdq8Q6zMuWy1AGpp/C4qWUjjPGoHkGs5bDW5//S/bqP5rEBT1WvQe5yLY+a/iCHF0cVjUKich8PyV8SqCO39ainuOex+Zf/AAUY+Pt347+IJ+EujXBXQPBz+XMFPy3Golf3rH1EQPlr77j3r3qMFGF+rOWTuz88tLAlgaNG2upyPpXdBXVluZS0NJFvIW3lQwHpTtNPUa5WbUYS4XO3afQ1urS3Id0Z2oQKsDzD7yg0pxSVwTPB/DTJBr/ljhVMuPxavnKGlWx6NT4T03UR5zHjivalqcaOcfKvsNcjXQ0M+ZBuz0NZyRSZ6L4bn22oikPB4r0qEtLHPNFs2ywSumOGNW4WZKkZ+oReTGCO/wClc81Y1TMeB8o3oDWC2LZWEi/aVDHHNK+oGtffvhHGOldLMieNRFCqiktBg0rcbuhNFwMvxjc/8Su3tx1fJxWWIfuJF017xw+mRpPciaTlLZdiD36sa46UeZ37G09Edf8AvJB8oIH8q9JQZyuRetJWUbUiZn/T8a1joQ9TvNOhurkqskuxDxtTg/nXXFmTPt/9iW8s9F/aL8GIGEAuZriD03NNbyKB/wACOKjEq+HnYKb99H9Bykla+OPVMq5IDCgDS09xt4qWNHHeMjuhNZy2Gtz/0/2zs8PpwOegr0Xuca2Pnn4gx7J2JNY1C47nz14s+Jdj8IfDGt+P7zDtpdszW8Z/5a3T/LAn4uRn2BooR5qnKFR2R+Bup3uoa/ql3rOpyme7v5pJ5pGPLySsXdj9WJr6ZI4y1p1r5T71OM9q1iktUQ7mzvjY7S3Nbe0RPKy0qhBlRknuadwsYuuam1hYT3EygoqsTWNSbjFtmkY3Z87aXdY1hZem5S2P945r5enL37npSWh6t9qJiXJr21JnE0ZjN50/HajdiIJ1w+KzkikdlpaeXaAg4xXVBaGb3NyKdLkDdwy9a6VK61MmrGfrOBBwQSKyq7GkTk4GIjcnrmuJbGzK7HMtS9xm1bSFhk/hW8TNlzzOKskgmfgdRzmkxo5TxbdbobRw33SwP44NcOKk+VG1Jas5fTJXMaFTjq34nmsaLdlYue500Us6qQWJH1ruU5GFkb+nXLREb+c1vCT6kNdj1C2fyYYiCNzEfrXpI5mdd4L8XXXhPxnomv2EpW70u8gukx13QuHH54xV/F7r6k7ao/ql0vVLbWtJtNasMNb6hBHcREdCkyB1/Q18VKLi3F9D1k7q5TuRz81HQlmjpxABINZspHJeLyWiPpis57Fx3P/U/a3Sif7O/CvRlucS2PAviGxNwQRmsappHc/Hn9tz4iwzajpnw3sJQ5tcXt6qngSONsKt9FJbH+0K9DBU7JzfUzqvofB3kTKMkZz3Fey4yscyaHI9xbOJT88ecGo1WpWhrtsuU8+Lr7f1rp5VJXRndrRlyCRjD16c4q47Es8z+JOpKmnw6ehw92+CP9leWrzsdO0FHudNBa3PF4pjHqLMv8IAr5xO0j0Oh6TBqcUtrGQcEcGvZhUXLc5JRdx8F/bhsGqVVE8hbaSOVlIOK0bTFZo7a22iyHHGK7IrQxe5QtpxFdFex6VnF2ZT1RPqsoICZ7dquZCMCMYjb1zXPY0MiSRlmGTmud6M1Ru2rgxjNdETJlxGySDWiJKc8mxSckc1DGjhfEk4e22A52nNeXiXeJ101qczYTSsI1jbG0Cuem5NpIuWh2Ed4FCJJy3tXoqVtDna6nSWZZnV9hAH975f512R8zFnZwXrTBYmkUEYx3rsVSO1zFxZ23h/TbdNQGoTuXbIwOiiuuCTdzGWiP6Nf2NfGD+M/wBnnw5JPIHuNIM+mSHvi1c+Xn/tmy18zj4ctdvvqd9F3gj6HuhhzkVwI1ZoWBGDis2UtjkPFQXymyeaznsaR3P/1f2r0dt2nD6V6TOJLQ+X/jx4rsfBHhfWfF+oDMOkW0lwQeN7KPkT/gTEL+NRKDnJRRonbU/mz1/WNT8Wa5qHiTXJmmvdQmeeeRu7ucnHoB0A7ACvoYwilbocbbuZcer2FqfKe53Y4+Ubv5VoqkY9SeRs6Dw/Dd+KtVh0HwvaXWr6lcnEdraQtNM59kUEge5496qVeCV5PQqNGcpcsVdn0vB+x1+0pHZ/2g3gS6ijZdxD3Nojge6GbIPtXKsfhv5jreAxD05SO/8A2Sv2jtK0oa1ceBL97d13EQmKeVR6tFE7P+laQx+Gk9JhLAYmK96J8MfFLw9rnh/xKsXiOzuNOmVdghu4ngdcdRtkCnrXn4y0pqcXdBTi4pqSszyYun2skODuJ6EV47+I6Ualpe7GMW78M8itIytoJovfaMcg4q+YmxPHqToetaKo0Jo9N8P+Ira6t/sspAYfrXu4arGSszgqRad0X761kWRLi2BfnoOT+Vazik7pmcW3uUL+eRXjMqFQR/ECP51nN7FIqrcLtOD1qEUZVy6l6wktS09CzbXcUYwzY5rSNkJl03aAblbIrQgydQvgIyQfWsajsi47nA6pfeYNoPBrxqsrndBFPSpMOxPRf8ilReopnaaRJJHIJEVVct/rH6fQV6VJtbHNJJ7nYyibcDcQBnfkGB8sR6hGxn8K65f3l9xkvJm7pQsb392rjzBxj7rA9wVPIremoS2ZEnJHcaVJPZv5M/KZ+Vx0/Gu2F46MwlZ6o/bz/gmt4gW48B+MPDzvu+xahBdIvotxCUb9Y68rM46wkdGHejR+h1ySzZrwzqZoWK4WokUjjfFTlkYEVlPYuO5//9b9o9CLixxnPFekziR+ZH/BSbxcuh/DKy8MLIEl8Q3o3gHBMFoPMb8C5QGuvDxvNy7Eyelj8J7zUbdBmYNMxPyoo6n2WvSc7IxsaWi22tardw2dppwWa5YJBbxRme5lc9AsaA5PsATVRqSSvOyQ+S75Y6s/dv8AZJ8AfGXQfBFnp+u+FtF8AWUKKrSJBnWLsY5kuVHCu3X53J/2F6V8VjJSdVuNTmXmtj9BwXs4UVz0rS9d/X/hz6WvPif8O9C1y38Labeprnie4BMdqjefOdv3pHVeEVe7HAHrmuC8pLm6HVZuVpNLyPRtKh8UzYvtZvxZQZDbEPlqF9zUc7T3HJUdlG7+8palH8OPFJm0zU4F8TKGIZblEuogw7fvQwyPSt1VS6nK6FWS+FI52w+Cnw8sL86j4Z8A6Lpd70+0CxthIB14KR5/UVXO2SowhrJr5IyfGX7Lfwj+Jtp5PxE8I6Vqzc/vjaRwSqT3WWEJKP8AvuiNRozqOnLpc+L/AIgf8EsfgXql01x4QfWdAbHEdtOtzB+C3ALD/vut/bS7nE8PSfkfMevf8EptWgjI0DxdKXVv+X2xKgj3aF2Ao9vJdBfUqT2meI61/wAE3/jjoV5iy1CxnQ/cZTJls9OAvGenPFCx/s3ewPK3L4ZI0J/2ePiJ4Lms/DPjtraxm8hbmzlWOK+haMfI8Z3YYEHk89+K+jymnDHKacmnHr6nz+aKpgpRaimn09DvIfg63ii2Ww0XwJZ+INUt42JOmR3kc74U7S0ETsjAtgEnAGetezVy2dCDm63MvSx41PGqrLl9nY+Jde8DTafr2o6fdJc6HNaTyRPaXUSiaF4yVZHUMdpBHTJIrGFJuN27HS5a6GDc+D5nBK6iv4xn/GqlRv8AaEp26GPeeGFsk3z3Ekg7vGQuP+AkEY/GuadBJXuaRnfodBpfhCwljWf+0ZLmMj+6sfPoevNdNOlG3xXM5Sd9gvPC+iz/AOjGSa2c8b9wcfkcfzpzpQemwRk1qVh8LtNRhNJem4VuV3LtX8QpzXOsBT3buW68uwL4OFgTJaWlrMe2CyHP4mn9W5fhSH7S+7ZdjmjDrFqkM1jKvCyLh0PsykYYfr71fO72mrMOXtqaV7Db31nHYanhQ3MFxGPlB9j29x1rSdpx5Z/JkK6d0crKms6Ncx/2pCt5ApBjnxk4HowwfwNcD9pTfvK67nQuSS0PY9Gv7fWrYXEIAcD5lr3KVRVFc4JwcWfqd/wTS14W3jzxX4aY/wDH/pcc6D1NtMM/pJXFmMf3UX2ZrQfvM/Xi53eYB0FfOHazQtANpy1Zss43xTyhC9qynsVHc//X/Z3w3ITZYPXFek9jiR+FP/BU3xT53xW8O+FYX3tp+lecUHQNczMcn/gKLXoUtIepD1Z+XNpeRWk3mzKJW/vf4VrGok9QcNND1n4SfFfxF8IPHEPxE8JyRHUIoJbcLcpvTy5sbtpBBVuByO2R3rnxVCOIjy8zXod+CxTw1Tn5VLyZ9k+A/ib+1n+2R4iu/Cfh3xOvh/RrBEfUbi3P2SC3ikJC52HzpXbB2oGwcckDmvPdPDYZa6vzPW+sYrFtqC5Y+S/Xc+77Yfs9/sK+Bvt17OLrxFex5mkYibU9SlXnLHPyoD24RPryfGk62JnaPT7ke4oUcNT5p6Lu93/n+RkeDpPjP+1i6a98RY7jwL8NrkbrTSreRob/AFOPs9xONrxQEdkCs/qF5ONSFOl7q96XfovRGlGcppyiuWPb7T9X09EeueOv2kv2cf2cdL/4RKW9hl1HSkWOPR9OTz7lPlyoZVOEyOS0jDrkk1hTpVaz5acf8grVo0veqzt5bv7v8z4r8S/8FP8Ax1fpLb+DfCtppCEkJJdzG4kC54JWPamcdtxHvX0VDKZP+LP7j52tmVFfwqd35v8AyPO7L/god8fYzi4m064HUg2mCec9RIMfh2rv/sfDNby+85P7Vq3vyR+5/wCZ6no3/BT7xjpcezxD4Xtb6bAOIpHgBHQk7g9cn9juMtKunmtRyzCnOP8ADs/J6Hqmk/8ABVjwEUK6/wCBdRifuba5gkB/B9lX/Z0l9pHL9aj2Ztzf8FKfgHq8Mgm0TW7CUfcZraGReoODsl6cVyVcrrNe61c9Kjj6UX717HlnxDvPF/7QVyvxY+F3hTUdQ8G2FlJZxXMyRW2+4EpaURxySBnxwMpnJBA5FfRZQoYCnU+sySbd/kePmkpY2pTVBN2X4nsf7B8PiDR/iXr1v4l0i60iKXS3ZHvIWgUsJogEVn4JI3HAPQVrmeOpV6MYUZX1v/X3nFhsFVozcqsbH5HftT6h537R3xMmgQ+U/iC/K4HBHmkZH1xSpytBa9CnF32Pns6tt3qzgEdiRmq5hWK99qBe2aN1ySCB+NKUtBqOpS029ubLTYr8RPJak7JsKdvH+1jAI7VzxqOMUzZwvfQ17pJ18qeGT7RaTjdFIO49D7juK6HfRp3Ril0NWw1U2x8m5+aFuoz/ACq41baMlwubcjRKuXO+KT7r/wBD6GultGdirPaTSQkQOJF/uvyPwrNptaFXMWxujazNYXkYEcvVG+6f8D6EVzxnyvlkauN1dHRpaT2yH7KPtlmfvRPyy/4/WupJr4dV2MdOu5d0aK1sr8TWgMccpAZD2zVU1GMrxFK7VmfpT/wT6MkPx/jEX3ZNK1BX+gCEfqBRj/4D9URR+M/a673tL6V8oj0GW7RcK2allI4/xHnynxzWMy47n//Q/Yrw1df6O0Z6rXpLVHEfzXft+eKLrXf2o/HaSdNMuINPT1EdtAgx+LEmuzmagkhpanxUJSTuaoTtqzRo0xcxmIKDXQmrGTR3fgL4l+N/hpeXGoeBtZuNHmu0EcxhIxIoOV3BgRlSTg9RXFiMNRxFlVjex6OExuIwjboStffS/wCZi+JPE+veL9Rm1XxLqM+o3k/LzXEheQ89MnsPQcV0wpwhHkirI56tepVnz1JNvzPqTUP27v2g9Q8Lx+GG12C0CQLbm7trcR3bRqMA7ySqsR1ZVB+leRDLaEZ80pNrse5LOa7hyxhFPulqfJrawZp5Z5ZWead2kkdyWd3bkszHJYnuTzXuRnFK0T5yfNJ3kzTs77eQC6kfrXTGVzBo2FkuNw8so/sWArZJkGdeXTxvlxhznIDbhxwKiTsNIzjPkYHfio5irHoHw28Hav8AEXxxoHgTQlLX+v3sFjERyEMzAFz7IuWPsKpSSV2K1z+mRPCuleF9B0XwN4ctmt/DXhe3Sxs9pGJBGMPK2P45GyxPfPvX5zjsTKtUb6H3uX4eNKn5s0YdJspIhiMMN2CCcj61wxukeg5FSTwR4YvpGGoaTaz4/wCetvFIST3ywJNdEZSXUxk12IE+FXw4tpTdJ4Y0uOc/xHTrfcfodldCnU7v7zK0eyNaTwp4fC/u9NtA3p9njHTufl/KrvfV3Lj2WxoaZpFkxey/sy2a2bhohEm1s9crt2n8au9+pbjZXPj/APaA/wCCffgH4jyzeIvhW1v4K1+Yl7i0MJOl3bf3mij5gk/24hg/xITzXrYfHSo+7LVHgV8JGr7y0Z+Rnxy/ZN+MHwZRr3xRobnTwTi+sibq04/vOozHntvVa9ZV6Vb4Hr2PJlhqtPWSuu6PmbStaezc2t8N8LcFTyD7j+hrSnWcXyyOeVO+qOoMdzGoutNkNzbdf9tfZh/Wu5XteGqOa1tJFS5ljvE23KfOOh6EVnJ8ysykrao2dA1Fd62sz7ZV4Ryeo9DW1GovhbInDqd1BCs0o3oA3c+ua9H4nqc22x+nv/BOTw3Ld/E3X/EjL+60nSTDuP8Az0u5UUD67UauPMZWoqPd/kXQXvtn683R+YcV8wjuZZtR8pz3qJDRxniNgFkAPTtWUzSO5//R/Yfw0se+SIjmvQWxx2P51P8AgpF4Gm8HftO69qbqRa+K4bbVoW7EvGIZh/wGSI/mK607wRSPz/IJ/wBWRxWb12ZotCu6XKnHpWbjIrmQ7fd9FJFFpheI7F2fvE5p8s2F0iVUuOMsatRfUnmRYjDL3ya0WhG7LQmIySAavmYrIl868fm3JUjuvUCqSl0FoO+0HAEj7iMAmr5+hPKSrcjOc9KFMOU+9P8Agnl9lj+Pcvia6Of+Eb0LUryLuRPKEtYyPceeTXFj6zhhpyXY9DAUPa4qnTfVn7o6X4h0q5tRF56uhAyoI5PvX5nCpZan6NVpO+h1GjSabNayxQOFYknB6/UV2UqqaaPPrQkpJtDN8Fq6iZsAk89s/wBK1TXUVn0NVpZAgkVw8RHDdx7Y6V0xTXUwun01ElQ7Ay/vOOSP5Vo72NqfK3qrGvpVvOuHjXbnnOOn4U4qW4VXC1mb8915UW25UMPVen5djXRzO2up5yppv3dDJmiS/heGzuEkB4MMw3Ag9iDzg9MVN+xa91++vuPyE/bk/YWt7q11D4z/AAd05YpIVafV9Gtk2hlXl7q0RRwQOZYgOmWUZyK9ehXUvdmeXiMPrzQR+NNpcappEgls3LKOQB6V6UZTpu8TyXGMlZna2vibSNRGzVbYRTdN6jBr04YuE9Ki1ON0JLWDLsul6bOouLG4BI5HPNaOFN6wZKclpJHZaIzvtRzll4rtpSvuYTR+9X/BP7wL/wAI58HbrxZcxFLjxRetIhI5NtaDyoz9C+815OZVL1FBdF+ZrRjZN9z7Vu0YsAvFeOjoZZt1wpBOcCoYzhfEYJ3kDrWU9i4n/9L7dTxt8TLMu9nqsCMfukwKcfXI5/SvkFm1dfa/BH1zyyh/L+Z8K/tneB/HHxx0nSbvUbm2uNb0QyLauI1hJimIMkblV5XIDLnoc+prop524P8Ae6r5GUsoUl+60Z+U+ufBb4paAzG70KaRVPLQESj9Of0r1aecYSf27ep5tTK8TH7F/Q89u7DXtOYpe2dxAR/z0hdf5ivVhi4SV4TT+Z588POPxwa+RQ/tKROHxXUq0jncESrq4zzV+3ZPs0Srqkb9cVXt09xchbjvIXHUc+9axmmS4snM9uDzIox6sK15kZ2ZIL6yj+5cqjeu4VXPHuHK+xiTanb+Zu85ST1571zSqK+5qokf9p22eJl/76FT7RDsfS/7K3xl0j4T/FRdW1q6hi0zVbG5024kkfEcYm2yRu5UMQokjXcQDgHPasa8VWpSpXtc68JW9hWjVtex9M3/APwUI06K9WTTPCt2LNWwJftESkkHsnOV993NfJf2a725j6x5zFq7gz7K+CX7a3wy+IdlHHJfrpGqhgjWt2ypIPQjnawP+yTjviuGthKlF7ad0dtHFUa60dn2Z9vaf4oj1K3WW3lSeNueuQR6g1lTqsuUEnqdVp+sRonlPmM8cdsV6MKy6nNKnfVHU29ymwmIhmJ4wcZq3UT2NIwa3HXPiT+zYUCHBPViOuPT2pLERih/VXUbYy28RJq2oJaFljRgAx4GCepx+Iq1XhN2Wgvqk6dNzepuyadc2txG5jEsTfLuU9SOV46+ta2nGV90csasJxa2Z1FqIpBtA3E9Vfhs12RseVUckfkR+1f/AME6f+EjutT+IX7POyDVbmV7m50C5IjgmZzlzaSceU2eRG2UP8JXpXfDEzirWuc8sNGS5r2f4H5RT/Av4z2l3JY3/hYw3ELFXjdyjKwPIII4NeXLPsPGTjNWaNVlGIavFXXqdBp37PvxnuG/0fw+qH3uEAoXEWDWt39wPJ8U+i+89s+Hn7NfxGGr2svi6CGy04SIZxHcB5mjyNwTapAYjOCeB15rT/WvDU17icn6WQ1kNeT95pL7z92/CXxI03RfD2naLoWgxWOm6fBHb28CTMRHFGNqj7nPue55rhed+0fO47+YnlHL7vN+B0EnxOklJP8AZyjH/TVv/iaP7X/ufiR/Zf8Af/AfH8SyoINioz/01P8A8TQ83/ufiP8Asp/zfgY+oeMxeqR5CoD33k/+y1lLN7/Y/EqOVv8Am/A//9P7Vkt5irDzVPp82K/Iuc/VOVHBeIdJuZpN26JvTc+K8+rO73O6kklscDfeFjKxaSCA+xbPWsFLzOhJHO3XgGzut6Pp9s4+gP8AOrU0upLicNq/wJ8Jalu+06JauW6fIuffnFdUMVOO0mc8qFOW8Uef6n+yJ8O9QDMNLWEn+7gfyxXZDMsRHabOOWAw73gjyzXv2JfChV5LOSS36kYY9PzruhnOIXW5xyynDvZWPnHxX+zXaeD7qO+XUHuY0kXETIfmznv04619XlOYVcRXUJLRanz2Y5fToUnOL12MR/A9oBj7MuT/ALIr9A5l2PkOV9ys3gS3Y/8AHuv/AHyKd12FyvuVZ/h5bHrAB+FQ1HsCUu5Rf4bWrdIevtUuMOxVpdzqfCPwZstR1SEXEG6NWBIx2FYVIxUdEddCDclc90vvgnodwu0WigDsBXjXsz6B00ynYfs0+F5t8klqweTrtZl/QVMqj6Gaw0N7H0L4C8KeOPAFoln4R8V6lYWyfdgaXz4h9EmD4/DFedOhCbvY9GNSUVZM99sfiT8cbWJY18QWt1gDmewQk/Uoy1j9VXRsuNV3PQdM+MnxmhiUXA0mdgeT5E0ZI/CQio+qu+jOuNV9StrXxp+OTRj7PHoSxAcB7e5dh+PnCn9W7s6VV6o84i+M37RKa2s8J0ArgAj7LcL09xNmj6pHfW5usTU5eXS3zPoTw5+0J8VoZYf7ftdKkQAcQNcJz3+8WrSNCd9Gc7dJ3Ukdf4s/aT8QnTUXSVtbC6jIkcgtKJQgJEfzAbQx4LDkDpXfVoVJQsmcNL6vCfNJXOz+Ef7Uej+M1j07xTpN/o19tBzNazeVnvtlC4I/L6V81QzmlD3K8l6nq4rJfaR9phn8np/wGcl8WtSTxV4nTUbC0WFI4hEWwN8hRiQz5xzgjA9K+SzPGrEV+aKslp6ndhMKqNLlk7s82SyuUx5keFPsP6GvG5zt5UPeGYEFF3YOMcDr+NaxmuonA9F8OyTLCFdSuD3II/Cvbo1Fbc8mtDXY7S2aZjhkzuHb+nNdqqLucTgSyo65ymPyoc0CiUD5uAdnTrj+lYuaNVE//9T7sxERhkPX1r8WZ+sGTd+URzbk4PBP865ppm0TIdVkOEgznoCcVztM3Q8WRILJEPzosybjZ7GdY9iW6N/n602pCTjfUzJdOmB3vAAR6LnrU+8jS6ZyuvWpjhLFTyM8KKpSkCSPl3x/o2i6pdWcGv3i2MCsTulcRrubA6sMcDmvucixUKDnKe9kfM5tQnVUVHoCfCb4OgDf480lCR0a7t8/+h19us4p/wAv4nyjwEu5fT4M/ByRQV8faaCQDxcQd/8AtrT/ALYj/J+If2e/5vwH/wDCjvg8ef8AhP8ATsf9d7f/AOO0f2xH+T8RfUH/ADfgC/BH4Mr/AKz4h6YP+29v/wDHaX9rx/k/Ef1B/wAx0ej/AAw+D+lPvg+ImknPrcW//wAdqXm8HvD8TWODlHVM6tfCvwsHA+IWjn/t4t//AI7XO8xpv7H4/wDAOlUqnc1bfw78L4hx4/0f/wACbf8A+O1H1+k/sfiV7Kp3Ly6T8MgMf8LB0cf9vNv/APHar+0KX8n4i9lU7lpNO+Gi/c+Iej/+BNv/APHar+0af8n4i9lU7lxLP4dDj/hY+jD/ALebf/47R/aNP+T8S1Couo5tM+HVwNrfEfRj/wBvNv8A/HaX9oU/5PxH+97lL/hDfh5K/mR/EjSQfae3/wDjtV/aFP8Ak/Ei1X+YjufBPgTKh/ibpaFs43XNunT0zLVrMaf8n4mbp1n9ol074LeBPE1yLdvibYFG6mK4tnP/AKMrWnmdFySkkvmYzoVrNpt/I9q0XULDSNMi02GY3n2MCET5/wBaI/lD8cfMBnivynFqj9YqSp7Xdj7yh7X2MFPeyKtxdWM7NK1sCTzyTmvLcEzrUpLqRrc2vGIFGOvNT7Ndgcn3LMF5bg5Ftkg9jW0aSvsZyk+50VlqceBi2K49xXoU4nFP1N1NYhCblUoR2K11pHM0+4Nq8UhzsbOORt/lTaElYh+22Ln50P8A3xWbiWmz/9k=";
+
+const {useState,useEffect,useRef,useLayoutEffect,Fragment}=React,h=React.createElement;
+const D=(c,...k)=>h('div',{className:c},...k);
+const MODS=['Identidad y Herencia','Navegación Política','Superación del Impostor','Marca y Visibilidad','Negociación Estratégica','Resolución de Conflictos','Gestión de Recursos','Plan de Posicionamiento'];
+const NIV=['Nivel 1: Por construir','Nivel 2: En desarrollo','Nivel 3: Sólido'];
+const nivel=s=>s<=7?0:s<=11?1:2;
+const sums=a=>DOMINIOS.map(d=>AFIRMACIONES_INICIALES.filter(x=>x.domain===d.id).reduce((t,x)=>t+(a[x.id]||0),0));
+
+const A5=['Módulo 1: Identidad y Herencia|n','Módulo 1: Mi mayor fortaleza e identidad|t','Módulo 2: Navegación Política|n','Módulo 2: Sponsor o Aliado a cultivar|t','Módulo 3: Impostor y Marca|n','Módulo 3: Arquetipo dominante y Evidencia|t','Módulo 4: Negociación|n','Módulo 4: Mi estrategia BATNA|t'];
+
+const ACT=[
+  {nom:'Diagnóstico de Herencia y Soltar Mandatos',cap:'Módulo 1',obj:'Desmantela las creencias heredadas sobre el liderazgo e identifica lo que conservas y lo que sueltas.',pasos:['Identifica la idea de "buen líder" que aprendiste en tu historia.','Decide qué rasgo conservar porque aporta a tu autenticidad.','Escribe el mandato o creencia que sueltas para crecer.'],prod:'Declaración de Identidad Ejecutiva Auténtica',f:[['m1_herencia','La idea de "buen líder" que aprendí en mi historia','a'],['m1_conservar','Lo que decido conservar de esa herencia','a'],['m1_soltar','El mandato que decido soltar a partir de hoy','a'],['m1_frase','Mi declaración de identidad ejecutiva','t']]},
+  {nom:'Mapa de Navegación del Entorno Corporativo',cap:'Módulo 2',obj:'Identifica la cultura real de poder y clasifica a los actores clave de tu entorno actual.',pasos:['Compara la cultura declarada vs. la cultura real de tu empresa.','Clasifica a las personas clave en Sponsors, Mentores, Aliados y Bloqueadores.','Diseña una acción de acercamiento a 30 días.'],prod:'Mapa de Capital Relacional y Acción Táctica',f:[['m2_cultura','Cultura declarada vs. Cultura real de mi empresa','a'],['m2_sponsors','Sponsors y Patrocinadores actuales o potenciales','t'],['m2_aliados','Aliados estratégicos y Mentores','t'],['m2_accion','Mi acción táctica de acercamiento político (Fecha y persona)','a']]},
+  {nom:'Desmantelamiento del Impostor y Marca Personal',cap:'Módulo 3',obj:'Transforma la duda profesional en evidencia objetiva de desempeño y redacta tu promesa de valor.',pasos:['Marca tu arquetipo del impostor dominante.','Construye 3 evidencias objetivas de tu capacidad directiva.','Escribe tu promesa de valor ejecutivo en 1 sola frase.'],prod:'Canvas de Marca Personal Ejecutiva',f:[['m3_arquetipo','Mi arquetipo de impostor dominante','t'],['m3_evidencias','3 evidencias objetivas de mi capacidad y resultados','a'],['m3_promesa','Mi promesa de valor ejecutivo (En 1 frase)','a'],['m3_visibilidad','Mi estrategia de visibilidad táctica (Sin "presumir")','a']]},
+  {nom:'Preparador de Negociación Estratégica (BATNA)',cap:'Módulo 4',obj:'Prepara una negociación real de recursos, salario o plazos definiendo intereses y alternativas.',pasos:['Define tus intereses reales y los de la contraparte.','Establece tu BATNA (Mejor Alternativa al Acuerdo Negociado).','Diseña 2 propuestas de creación de valor mutuo.'],prod:'Hoja de Preparación de Negociación Ejecutiva',f:[['m4_intereses','Mis intereses reales vs. Intereses de la otra parte','a'],['m4_batna','Mi BATNA si no hay acuerdo inmediato','a'],['m4_opcion1','Propuesta de valor 1 (Fases o reasignación)','a'],['m4_opcion2','Propuesta de valor 2 (Contrapropuesta basada en datos)','a']]},
+  {nom:'Protocolo de Resolución de Conflictos en 2 Tiempos',cap:'Módulo 5',obj:'Convierte un conflicto operativo de equipo en una solución integrada sostenida.',pasos:['Pausa la tensión y aplica escucha activa por separado.','Identifica el objetivo común que une a ambas partes.','Establece la solución en 2 tiempos (Contención + Proceso) con revisión.'],prod:'Plan Integrado de Alineación de Equipo',f:[['m5_conflicto','Descripción del conflicto u objeción actual','a'],['m5_escucha','Intereses no declarados de cada involucrado','a'],['m5_tiempo1','Paso 1: Respuesta de contención inmediata','a'],['m5_tiempo2','Paso 2: Corrección de proceso e indicador a 14 días','a']]},
+  {nom:'Auditoría de Recursos y Micro-Límites Ejecutivos',cap:'Módulo 6',obj:'Filtra tus capacitaciones de mayor impacto y establece límites de agenda sostenibles.',pasos:['Audita los recursos que usas y elimina el consumo pasivo sin aplicación.','Elige máximo 3 herramientas de crecimiento para tus próximos 90 días.','Aplica un límite explícito de energía y agenda esta semana.'],prod:'Matriz de Herramientas Priorizadas y Límites',f:[['m3_auditoria','Recursos que elimino por falta de aplicabilidad real','a'],['m6_herramientas','Mis 3 herramientas elegidas (ej. Bitácora, Pausa 90s)','a'],['m6_limite','Mi límite explícito de agenda para esta semana','t']]},
+  {nom:'Cierre de Referentes Globales y Lecciones',cap:'Módulo 7',obj:'Sintetiza las estrategias de Lagarde, Nooyi y Gates aplicables a tu carrera.',pasos:['Analiza el estilo de influencia de cada líder global.','Identifica la lección más potente para tu puesto actual.','Escribe tu conclusión de cierre e integración.'],prod:'Declaración de Adopción de Estrategias Ejecutivas',f:[['m7_lagarde','Lección aplicable de Christine Lagarde (Firmeza/Datos)','a'],['m7_nooyi','Lección aplicable de Indra Nooyi (Visión/Propósito)','a'],['m7_gates','Lección aplicable de Melinda Gates (Alianzas/Red)','a'],['m7_cierre','Mi conclusión de adopción en 1 frase','a']]},
+  {nom:'Hoja de Ruta y Prompts de IA para el Crecimiento',cap:'Módulo 8',obj:'Consolida tu plan ejecutivo en los 3 pilares clave integrando asistentes de IA.',pasos:['Completa la fila de cada pilar de crecimiento.','Establece micro-hábitos ejecutivos sostenibles.','Copia y prueba los prompts de IA para simular tus negociaciones.'],prod:'Plan de Posicionamiento Ejecutivo a 90 Días',f:[['m8_pilar1','Pilar 1: Marca Personal & Visibilidad (Meta y micro-hábito)','a'],['m8_pilar2','Pilar 2: Negociación & Reclamación de Valor (Meta y BATNA)','a'],['m8_pilar3','Pilar 3: Navegación Política & Sponsors (Meta y fecha)','a'],['m8_prompt','Prompt de IA probado y feedback obtenido','a']]}
+];
+
+const TURNO = [
+  'Tu turno: ¿En qué situación reciente actuaste bajo un molde heredado y cómo aplicarás tu estilo auténtico?',
+  'Tu turno: ¿Quién es la figura clave que necesitas cultivar esta semana en tu mapa político corporativo?',
+  'Tu turno: ¿Cuál es el logro reciente que has minimizado y qué evidencia objetiva le da su justo valor?',
+  'Tu turno: Piensa en tu próxima negociación: ¿cuál es tu BATNA si la contraparte se mantiene rígida?',
+  'Tu turno: ¿Qué conflicto operativo de tu área requiere que desvincules la emoción de los intereses reales?',
+  'Tu turno: ¿Cuál es el curso o actividad que consumes por inercia y que sustituirás por un micro-hábito?',
+  'Tu turno: ¿Cuál de las 3 referentes globales refleja mejor el tipo de impacto al que aspiras?',
+  'Tu turno: Revisa tu hoja de ruta a 90 días: ¿cuál es la primera micro-acción que harás hoy mismo?'
+];
+
+const REPASA = [
+  'el Análisis Crítico de la Identidad, los desafíos estructurales vs. personales y la consolidación del estilo propio.',
+  'la lectura del contexto, la estructura formal e informal de poder y la red de patrocinio directivo.',
+  'los 5 Arquetipos del Impostor, el Filtro de Realidad con datos duros y el Canvas de Marca Personal Ejecutiva.',
+  'el modelo de Negociación Colaborativa, la diferenciación entre Intereses vs. Posiciones y la definición del BATNA.',
+  'la regulación emocional bajo presión, la escucha activa con preguntas poderosas y los acuerdos en 2 tiempos.',
+  'la Auditoría de Recursos de Aprendizaje, los micro-hábitos sostenibles y la protección de energía ejecutiva.',
+  'los casos de estudio de Lagarde, Nooyi y Gates, analizando estilos de influencia y barreras superadas.',
+  'las metas SMART adaptadas a los 3 pilares estratégicos y el uso de Prompts de IA como aceleradores.'
+];
+
+const ORDER=['diagnostico','resultado','casos','feedback','smart','seguimiento'];
+const DC=['#F87F57','#4D270F','#FFA100','#B9684D','#92400e','#b45309','#7a5236','#4D270F'];
+const PC=['#F87F57','#B9684D','#4D270F'];
+const NEXT={
+  guia:['diagnostico','Comenzar autodiagnóstico','Empieza por conocer tu punto de partida.'],
+  resultado:['casos','Continuar a los casos prácticos','Ya conoces tu mapa. Ahora analiza a tres referentes con apoyo de IA.'],
+  feedback:['smart','Ver mi Plan a 90 días','Tus respuestas ya generaron tu plan personalizado.'],
+  smart:['seguimiento','Continuar al seguimiento semanal','Tu plantilla semanal ya se pre-llenó con tus resultados.'],
+  seguimiento:['recursos','Ver Prompts de IA','Úsalos para ejecutar tu plan.']
+};
+const AUTO=['guia','smart','seguimiento'];
+const Next=c=>D('next no-print',h('span',null,NEXT[c][2]),h('a',{className:'btn',href:'#'+NEXT[c][0]},NEXT[c][1]));
+const Cont=(id,t)=>D('cont no-print',h('button',{type:'button',className:'btn',onClick:()=>{const e=document.getElementById(id);e&&e.scrollIntoView({behavior:'smooth',block:'start'})}},t+' →'));
+const go=id=>setTimeout(()=>{const el=document.getElementById(id);el&&el.scrollIntoView({behavior:'smooth'})},350);
+const LS='liderazgo_femenino_v1';
+
+function usePersist(){
+  const[s,setS]=useState(()=>{try{return JSON.parse(localStorage.getItem(LS))||{}}catch(x){return{}}});
+  const set=(k,v)=>setS(p=>{const n={...p,[k]:typeof v==='function'?v(p[k]):v};try{localStorage.setItem(LS,JSON.stringify(n))}catch(x){}return n});
+  return[s,set];
+}
+
+function TA({v,on,ph}){
+  const r=useRef();
+  useLayoutEffect(()=>{const t=r.current;if(t){t.style.height='auto';t.style.height=t.scrollHeight+2+'px'}},[v]);
+  return h('textarea',{ref:r,rows:2,value:v||'',placeholder:ph||'Escribe aquí...',onChange:e=>on(e.target.value)});
+}
+
+function Field({label,t,v,on,ph}){
+  return h('label',{className:'f'},h('span',null,label),
+    t==='5'||t==='10'?h('select',{value:v||'',onChange:e=>on(e.target.value)},h('option',{value:''},'—'),...Array.from({length:t==='5'?5:11},(_,i)=>{const o=t==='5'?i+1:i;return h('option',{key:o,value:o},o)}))
+    :t==='t'?h('input',{type:'text',value:v||'',onChange:e=>on(e.target.value)}):h(TA,{v,on,ph}));
+}
+
+function Scale({v,on,locked,name}){
+  return D('scale',...[1,2,3,4,5].map(n=>h('button',{key:n,type:'button',disabled:locked,'aria-pressed':v===n,title:['Casi nunca','Pocas veces','A veces','Frecuentemente','Casi siempre'][n-1],'aria-label':name+': '+n,className:v===n?'on':'',onClick:()=>on(n)},n)));
+}
+
+function Quiz({items,ans,locked,onAns,onDone,grouped,cta}){
+  const done=items.filter(a=>ans[a.id]).length;let last='';
+  return D('quiz',D('legend','1 Casi nunca · 2 Pocas veces · 3 A veces · 4 Frecuentemente · 5 Casi siempre'),
+    ...items.map((a,i)=>{
+      const dom=grouped&&a.domain!==last?(last=a.domain,DOMINIOS.find(d=>d.id===a.domain)):null;
+      return h(Fragment,{key:a.id},dom&&h('h3',{className:'dom',style:{borderLeft:'6px solid '+DC[DOMINIOS.indexOf(dom)]}},dom.name,h('span',null,dom.desc)),D('q',h('span',{className:'n'},i+1),h('p',null,a.text),h(Scale,{v:ans[a.id],on:v=>onAns(a.id,v),locked,name:a.text})));
+    }),
+    D('bar',locked?h('p',{className:'lock'},'🔒 Respuestas procesadas y guardadas.'):h(Fragment,null,h('span',{className:'cnt'},done+' de 24 respondidas',D('meter',h('i',{style:{width:(done/24*100)+'%',background:'var(--cyan)'}}))),h('button',{className:'btn',disabled:done<24,onClick:()=>confirm('Al procesar, tus respuestas quedarán guardadas. ¿Continuar?')&&onDone()},cta))));
+}
+
+function Radar({series}){
+  const S=520,c=S/2,R=150,N=8;
+  const pt=(i,v,k=1)=>{const a=Math.PI*2*i/N-Math.PI/2,r=(v-3)/12*R*k;return[c+r*Math.cos(a),c+r*Math.sin(a)]};
+  const poly=f=>DOMINIOS.map((_,i)=>f(i).join(',')).join(' ');
+  return h('svg',{viewBox:`0 0 ${S} ${S}`,className:'radar',role:'img','aria-label':'Mapa de Liderazgo Femenino'},
+    ...[3,7,11,15].map(v=>h('polygon',{key:v,points:poly(i=>pt(i,v)),fill:v===15?'#EDE1D2':'none',stroke:'#d3c4b1'})),
+    ...DOMINIOS.map((_,i)=>{const[x,y]=pt(i,15);return h('line',{key:'l'+i,x1:c,y1:c,x2:x,y2:y,stroke:'#d3c4b1'})}),
+    ...DOMINIOS.map((d,i)=>{const[x,y]=pt(i,15,1.18);return h('text',{key:d.id,x,y,textAnchor:'middle',dominantBaseline:'middle',fontSize:13,fontWeight:700,fill:'#4D270F'},d.name)}),
+    ...series.flatMap((s,k)=>[h('polygon',{key:'p'+k,points:poly(i=>pt(i,s.v[i])),fill:s.fill,stroke:s.color,strokeWidth:2.5}),...s.v.map((v,i)=>{const[x,y]=pt(i,v);return h('circle',{key:k+'c'+i,cx:x,cy:y,r:4,fill:s.color})})]));
+}
+
+const Legend=({items})=>D('leg',...items.map(([c,t])=>h('span',{key:t},h('i',{style:{background:c}}),t)));
+const Sec=(id,title,lead,kids,cls='')=>{const n=ORDER.indexOf(id);return h('section',{id,className:cls},D('wrap',n>=0&&h('span',{className:'step'},'Paso '+(n+1)+' de '+ORDER.length),h('h2',null,title),lead&&h('p',{className:'lead'},lead),...kids,AUTO.includes(id)&&Next(id)))};
+
+// ===== Plan, Mapa, Casos IA y PDF =====
+const PIL=[
+ {id:'p1',dias:'Días 1 a 30',nombre:'Negociación y Valor',doms:['negociacion','conflicto','recursos'],
+  obj:['Construirás la base: prepararás cada petición con intereses, BATNA y datos antes de sentarte a negociar.','Consolidarás tu preparación: sostendrás tu postura con datos y propondrás alternativas de valor mutuo.','Escalarás tu influencia: liderarás negociaciones complejas y convertirás desacuerdos en acuerdos de largo plazo.'],
+  sem:['Completa la hoja de preparación (intereses, BATNA y 2 opciones de valor) para una negociación real próxima.','Ensaya tu petición con el Prompt 3 de IA (negociación difícil) y refuerza tus argumentos con datos duros.','Conduce la conversación con pausa de 90 segundos y preguntas poderosas; documenta el resultado y tu aprendizaje.'],
+  ind:'Una negociación real conducida con hoja de preparación y un acuerdo o aprendizaje documentado.'},
+ {id:'p2',dias:'Días 31 a 60',nombre:'Navegación Política',doms:['navegacion','identidad'],
+  obj:['Mapearás por primera vez quién decide y quién influye, y reconocerás tu estilo propio al relacionarte.','Pasarás de acercamientos esporádicos a una agenda constante con sponsors y aliados.','Activarás tu red de patrocinio para visibilizar tu trabajo y apadrinarás a otras profesionales.'],
+  sem:['Clasifica a los actores clave en Sponsors, Mentores, Aliados y Bloqueadores y elige a quién acercarás primero.','Agenda un café táctico de 15 minutos con un Sponsor potencial para pedir su perspectiva sobre un proyecto estratégico.','Construye consensos previos con 2 aliados antes de tu siguiente comité y registra las resistencias que anticipaste.'],
+  ind:'Mapa de actores completo y al menos 2 conversaciones de patrocinio o alianza sostenidas.'},
+ {id:'p3',dias:'Días 61 a 90',nombre:'Marca Personal y Visibilidad',doms:['marca','impostor','posicionamiento'],
+  obj:['Construirás evidencias objetivas de tu capacidad y una promesa de valor clara para empezar a comunicarla.','Consolidarás tu marca: comunicarás resultados con regularidad y sin sentir que presumes.','Consolidarás tu posicionamiento ejecutivo: serás referente visible y sostendrás tu plan con micro-hábitos e IA.'],
+  sem:['Redacta tu promesa de valor ejecutivo en una frase y respáldala con 3 evidencias de impacto medibles.','Envía a la dirección un reporte de una página con métricas de impacto, usando el Prompt 2 de IA para el mensaje.','Participa como ponente o vocera en un espacio relevante y realiza tu auditoría final de los 90 días.'],
+  ind:'Promesa de valor definida, un reporte de impacto enviado y una participación visible en un foro de decisión.'}
+];
+const buildPlan=s=>PIL.map(p=>{const ix=p.doms.map(d=>DOMINIOS.findIndex(x=>x.id===d)),avg=ix.reduce((t,i)=>t+s[i],0)/ix.length,n=nivel(Math.round(avg)),f=ix.reduce((a,i)=>s[i]<s[a]?i:a,ix[0]);return{...p,n,pct:Math.round((avg-3)/12*100),f,fn:nivel(s[f]),sem:[X.acc[f][nivel(s[f])],...p.sem]}});
+
+function MapaLider({ans}){
+  const[sel,setSel]=useState(0);
+  const sm=sums(ans),cnt=DOMINIOS.map(d=>AFIRMACIONES_INICIALES.filter(a=>a.domain===d.id&&ans[a.id]).length);
+  const v=sm.map((s,i)=>cnt[i]?s/cnt[i]*3:3),tot=cnt.reduce((a,b)=>a+b,0),ix=DOMINIOS.map((_,i)=>i).filter(i=>cnt[i]);
+  const hi=ix.reduce((a,i)=>v[i]>v[a]?i:a,ix[0]),lo=ix.reduce((a,i)=>v[i]<v[a]?i:a,ix[0]),n=nivel(Math.round(v[sel]));
+  return D('mapa',h('h3',null,'Mapa de Liderazgo'),h('p',{className:'meta'},'Se dibuja en vivo con tus respuestas ('+tot+' de 24). Toca un dominio para ver su interpretación.'),
+    h(Radar,{series:[{v,color:'#F87F57',fill:'rgba(248,127,87,0.30)'}]}),
+    D('chips',...DOMINIOS.map((d,i)=>h('button',{key:d.id,type:'button',className:'chip'+(sel===i?' on':''),onClick:()=>setSel(i)},h('i',{style:{background:DC[i]}}),d.name+' '+cnt[i]+'/3'))),
+    D('insight',cnt[sel]?h(Fragment,null,h('span',{className:'pill lv'+n},NIV[n]),h('b',{style:{marginLeft:10}},DOMINIOS[sel].name+': '+Math.round(v[sel]*10)/10+' / 15'),D('meter',h('i',{style:{width:(v[sel]-3)/12*100+'%',background:DC[sel]}})),h('p',{style:{marginTop:12}},X.rub[sel][n]),h('p',{style:{margin:0}},h('b',null,'Primer paso sugerido: '),X.acc[sel][n]),cnt[sel]<3&&h('p',{className:'meta'},'Lectura parcial: faltan afirmaciones de este dominio.')):h('p',{style:{margin:0}},'Responde las afirmaciones de «'+DOMINIOS[sel].name+'» para ver tu interpretación inmediata.')),
+    ix.length>1&&h('p',{style:{marginTop:16}},h('b',null,'Lectura rápida: '),'tu mayor fortaleza hasta ahora es «'+DOMINIOS[hi].name+'» y tu área prioritaria es «'+DOMINIOS[lo].name+'».'));
+}
+
+function fbLocal(c,v){
+  const w=v.trim().split(/\s+/).length,ok=[],no=[];
+  c.crit.forEach(([re,a,b])=>re.test(v)?ok.push(a):no.push(b));
+  const len=w<60?'Tu análisis es breve ('+w+' palabras): desarrolla cada idea con un ejemplo o evidencia concreta.':w<150?'Tu extensión es adecuada ('+w+' palabras); gana profundidad conectando causa, decisión y resultado.':'Tu análisis está bien desarrollado ('+w+' palabras); verifica que cada párrafo cierre con una conclusión accionable.';
+  return '**Fortalezas de tu análisis**\n'+(ok.length?ok.map(x=>'- '+x).join('\n'):'- Te atreviste a fijar una postura propia sobre el caso, un buen punto de partida.')+'\n\n**Oportunidades de mejora**\n'+[...no,len].map(x=>'- '+x).join('\n')+'\n\n**Pregunta para profundizar**\n'+c.q+'\n\n**Siguiente paso**\nReescribe tu análisis incorporando una acción concreta, con fecha, para tu propio rol.';
+}
+
+function CasoIA({c,a,fb,onText,onFb}){
+  const[ld,setLd]=useState(false),[cp,setCp]=useState(false);
+  const txt=c.preguntas.map((p,j)=>(j+1)+') '+p+'\nMi respuesta: '+((a[j]||'').trim()||'[aún sin responder]')).join('\n\n');
+  const solo=a.map(x=>x||'').join('\n').trim(),w=solo?solo.split(/\s+/).length:0;
+  const prompt='Actúa como coach ejecutiva senior en liderazgo femenino y posicionamiento ejecutivo.\n\nCaso: '+c.titulo+'\nProblemática: '+c.descripcion+'\n\nEstas son mis respuestas:\n\n'+txt+'\n\nEvalúa mi análisis: 1) señala mis fortalezas, 2) identifica vacíos, supuestos o sesgos, 3) propón 3 acciones concretas con fecha para mi propio rol y 4) cierra con una pregunta que me rete a profundizar.';
+  const copiar=()=>{const ok=()=>{setCp(true);setTimeout(()=>setCp(false),2000)};try{navigator.clipboard.writeText(prompt).then(ok,ok)}catch(e){ok()}};
+  const send=async()=>{
+    setLd(true);const ac=new AbortController(),tm=setTimeout(()=>ac.abort(),9000);let r;
+    try{r={t:await consultarCoach('Casos prácticos',c.titulo,'Problemática: '+c.descripcion+'\n\nRespuestas de la participante:\n'+txt,{tipo:'feedback_analitico'},ac.signal),m:'ia'}}
+    catch(e){await new Promise(z=>setTimeout(z,1500));r={t:fbLocal(c,solo),m:'sim'}}
+    clearTimeout(tm);onFb(r);setLd(false)};
+  return h(Fragment,null,
+    h('h4',{style:{marginTop:24}},'Tu análisis'),
+    ...c.preguntas.map((p,j)=>h('label',{key:j,className:'f no-print'},h('span',null,(j+1)+'. '+p),h(TA,{v:a[j],on:v=>onText(j,v),ph:' '}))),
+    D('ia-box no-print',h('h4',null,'✨ Prompt personalizado con tus respuestas'),h('p',{className:'meta'},'Se completa solo con lo que escribes arriba. Cópialo en ChatGPT o Claude para un análisis más profundo.'),
+      h('div',{style:{whiteSpace:'pre-wrap',background:'#fff',border:'1px solid var(--line)',borderRadius:12,padding:'14px 16px',fontSize:16,maxHeight:260,overflowY:'auto'}},prompt),
+      D('bar',h('button',{type:'button',className:'btn ghost',onClick:copiar},cp?'✓ Copiado':'Copiar prompt'),h('button',{type:'button',className:'btn',disabled:ld||w<20,onClick:send},fb?'Pedir nuevo feedback de IA':'🤖 Recibir feedback de IA')),
+      ld&&D('cload',D('cspin'),h('span',null,'La IA está analizando tus respuestas...')),
+      fb&&!ld&&D('cmsg c',h(Md,{text:fb.t}),fb.m==='sim'&&D('cfoot','Modo simulación: el Coach en línea no está conectado; este feedback se generó localmente con criterios del caso.'))));
+}
+
+function pdfPlan(email,plan,sF,sm,sg,modo){
+  const J=window.jspdf&&window.jspdf.jsPDF;
+  if(!J){alert('No se pudo cargar el generador de PDF. Se abrirá la impresión: elige "Guardar como PDF".');window.print();return}
+  const d=new J({unit:'mm',format:'a4'}),M=18,TW=174,seg=modo==='seg';let y=M;
+  const t=(s,sz,b,c)=>{d.setFont('helvetica',b?'bold':'normal');d.setFontSize(sz);d.setTextColor(...(c||[77,39,15]));d.splitTextToSize(String(s),TW).forEach(l=>{if(y>280){d.addPage();y=M}d.text(l,M,y);y+=sz*.48});y+=2};
+  t(seg?'Plantilla de Seguimiento Semanal - 90 días':'Plan de Marca Personal y Visibilidad a 90 días',18,1);
+  t('Workbook de Liderazgo Femenino - Guido Cattaneo & Luisa Cárdenas',10,0,[122,82,54]);
+  t((email||'')+'  |  '+new Date().toLocaleDateString('es-MX'),10,0,[122,82,54]);y+=4;
+  if(!seg)plan.forEach(b=>{
+    t(b.dias+' - '+b.nombre,14,1,[185,104,77]);
+    t('Nivel actual: '+NIV[b.n]+' ('+b.pct+'%) | Foco prioritario: '+DOMINIOS[b.f].name+' ('+sF[b.f]+'/15)',10,1);
+    t('Objetivo: '+b.obj[b.n],10);
+    b.sem.forEach((s,k)=>t('Semana '+(k+1)+': '+s,10));
+    t('Indicador de éxito: '+b.ind,10);
+    const fr=((sm[b.id]||{}).fr||'').trim();if(fr)t('Mi compromiso: '+fr,10,1);
+    y+=4});
+  if(seg)plan.forEach((b,bi)=>{t(b.dias+' - '+b.nombre,13,1,[185,104,77]);b.sem.forEach((s,k)=>{const n=bi*4+k+1,q='w'+n,a=sg[q+'a']!==undefined?sg[q+'a']:s,e=sg[q+'s']||'Pendiente',nt=(sg[q+'n']||'').trim();
+    t('Semana '+n+' ['+e+']: '+a,10);t('Notas: '+(nt||'______________________________________________'),9,0,[122,82,54])});y+=3});
+  d.save(seg?'Seguimiento_semanal_90_dias.pdf':'Plan_90_dias_Marca_Personal.pdf');
+}
+
+// ===== Coach IA =====
+const COACH_URL='/.netlify/functions/coach';
+function leerPuntajes(){try{const st=JSON.parse(localStorage.getItem(LS))||{};const a=st.finLock?st.fin:st.diagLock?st.diag:null;if(!a)return{};const t=sums(a),o={};DOMINIOS.forEach((d,i)=>{o[d.id]=t[i]});return o}catch(x){return{}}}
+async function consultarCoach(moduloNombre,actividadNombre,respuestasTexto,extra,signal){
+  const payload={modulo:moduloNombre,actividad:actividadNombre,userInput:respuestasTexto||'',userScores:leerPuntajes(),...(extra||{})};
+  const res=await fetch(COACH_URL,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload),signal});
+  let data=null;try{data=await res.json()}catch(x){}
+  if(!res.ok)throw new Error((data&&(data.error||data.message))||'El servidor del Coach respondió con error '+res.status+'.');
+  const t=data&&(data.respuesta||data.response||data.text||data.reply||data.message);
+  if(!t)throw new Error('El Coach no devolvió una respuesta. Inténtalo de nuevo.');
+  return String(t);
+}
+
+const inl=t=>{const o=[];String(t).split(/(\*\*[^*]+\*\*)/g).forEach((x,i)=>{if(/^\*\*[^*]+\*\*$/.test(x))o.push(h('strong',{key:i},x.slice(2,-2)));else if(x)o.push(x)});return o};
+function Md({text}){
+  const out=[];let ul=null,k=0;const flush=()=>{if(ul){out.push(h('ul',{key:'u'+k++},...ul));ul=null}};
+  String(text||'').split('\n').forEach(raw=>{const l=raw.trim();if(!l){flush();return}
+    let m=l.match(/^[-*•]\s+(.*)$/);
+    if(m){ul=ul||[];ul.push(h('li',{key:'i'+k++},...inl(m[1])))}
+    else{flush();const hd=l.match(/^#{1,4}\s+(.*)$/);out.push(hd?h('p',{key:'p'+k++},h('strong',null,...inl(hd[1]))):h('p',{key:'p'+k++},...inl(l)))}});
+  flush();return h(Fragment,null,...out);
+}
+
+function CoachModal({ctx,onClose}){
+  const[loading,setLoading]=useState(false),[response,setResponse]=useState(''),[error,setError]=useState(''),[msgs,setMsgs]=useState([]),[q,setQ]=useState('');
+  const ac=useRef(null),endRef=useRef(null),drRef=useRef(null);
+  const run=async(pregunta,historial)=>{
+    if(ac.current)ac.current.abort();const c=new AbortController();ac.current=c;
+    setLoading(true);setError('');const tm=setTimeout(()=>c.abort(),60000);
+    try{const t=await consultarCoach(ctx.modulo,ctx.actividad,ctx.texto,pregunta?{pregunta,historial:historial||[]}:{},c.signal);
+    if(ac.current!==c)return;setResponse(t)}
+    catch(e){if(ac.current!==c)return;setError(e&&e.name==='AbortError'?'El Coach tardó demasiado en responder. Inténtalo de nuevo.':e instanceof TypeError?'No se pudo conectar con el Coach. Revisa tu conexión.':(e&&e.message)||'Ocurrió un error inesperado.')}
+    finally{clearTimeout(tm);if(ac.current===c)setLoading(false)}};
+  
+  useEffect(()=>{if(!ctx.vacio)run();
+    const k=e=>{if(e.key==='Escape')onClose()};document.addEventListener('keydown',k);
+    const ov=document.body.style.overflow;document.body.style.overflow='hidden';drRef.current&&drRef.current.focus();
+    return()=>{document.removeEventListener('keydown',k);document.body.style.overflow=ov;const c=ac.current;ac.current=null;c&&c.abort()}},[]);
+  
+  useEffect(()=>{endRef.current&&endRef.current.scrollIntoView({behavior:'smooth',block:'end'})},[msgs,response,loading,error]);
+  const toH=a=>a.map(m=>({role:m.r==='u'?'user':'coach',text:m.t}));
+  const send=()=>{const t=q.trim();if(!t||loading)return;const prev=[...msgs,...(response?[{r:'c',t:response}]:[])];setMsgs([...prev,{r:'u',t}]);setResponse('');setQ('');run(t,toH(prev))};
+  const retry=()=>{const l=msgs[msgs.length-1];if(l&&l.r==='u')run(l.t,toH(msgs.slice(0,-1)));else run()};
+  
+  return h('div',{className:'coach-ov no-print',onMouseDown:e=>{if(e.target===e.currentTarget)onClose()}},
+    h('div',{className:'coach-dr',role:'dialog','aria-modal':'true','aria-labelledby':'coach-ttl',tabIndex:-1,ref:drRef},
+      D('coach-hd',D('',h('h3',{id:'coach-ttl'},'Coach Ejecutivo · Liderazgo Femenino'),h('span',{className:'coach-badge'},ctx.modulo+' · '+ctx.actividad)),
+        h('button',{type:'button',className:'coach-x','aria-label':'Cerrar',onClick:onClose},'×')),
+      h('div',{className:'coach-bd','aria-live':'polite'},
+        ctx.vacio&&!msgs.length&&!response&&!loading&&D('cinfo','Aún no has escrito respuestas en esta sección. Completa tus notas o haz una pregunta directa al Coach abajo.'),
+        ...msgs.map((m,i)=>D('cmsg '+m.r,m.r==='u'?m.t:h(Md,{text:m.t}))),
+        response&&D('cmsg c',h(Md,{text:response})),
+        loading&&D('cload',D('cspin'),h('span',null,'Analizando tus respuestas y contexto ejecutivo...')),
+        error&&D('cerr',h('div',null,error),h('button',{type:'button',className:'btn ghost',onClick:retry},'Reintentar')),
+        (response||msgs.length>0)&&D('cfoot','Guía de reflexión ejecutiva impulsada por IA.'),
+        h('div',{ref:endRef})),
+      D('coach-ft',h('textarea',{rows:2,value:q,placeholder:'Haz una pregunta o pide afinar tus respuestas...','aria-label':'Escribe al Coach',onChange:e=>setQ(e.target.value),onKeyDown:e=>{if(e.key==='Enter'&&!e.shiftKey){e.preventDefault();send()}}}),
+        h('button',{type:'button',className:'btn',disabled:loading||!q.trim(),onClick:send},'Enviar'))));
+}
+
+function App(){
+  const[S,set]=usePersist();
+  const[email,setEmail]=useState(()=>{try{return localStorage.getItem('liderazgo_femenino_auth')||''}catch(x){return''}});
+  const[auth,setAuth]=useState(!!email);
+  const[act,setAct]=useState('');
+  const[coach,setCoach]=useState(null);
+
+  useEffect(()=>{if(!auth)return;const io=new IntersectionObserver(es=>es.forEach(x=>x.isIntersecting&&setAct(x.target.id)),{rootMargin:'-40% 0px -55% 0px'});document.querySelectorAll('section[id]').forEach(s=>io.observe(s));return()=>io.disconnect()},[auth]);
+
+  const login=ev=>{ev.preventDefault();const m=email.trim();if(!m)return;try{localStorage.setItem('liderazgo_femenino_auth',m)}catch(x){}setAuth(true)};
+  const logout=()=>{try{localStorage.removeItem('liderazgo_femenino_auth')}catch(x){}setAuth(false);setEmail('')};
+
+  const put=k=>(key,val)=>set(k,p=>({...(p||{}),[key]:val}));
+  const diag=S.diag||{},fin=S.fin||{},sD=sums(diag),sF=sums(fin);
+  const base=S.finLock?sF:S.diagLock?sD:null;
+
+  const NAV=[['diagnostico','Autodiagnóstico inicial'],['resultado','Mapa de Liderazgo'],['casos','Casos prácticos'],['plan90','Plan personalizado'],['seguimiento90','Bitácora 12 semanas'],['eval90','Evaluación día 90'],['recursos','Prompts de IA']];
+  const finItems=X.order.map(id=>AFIRMACIONES_INICIALES.find(a=>a.id===id));
+  const sm=S.smart||{},sg=S.seg2||{};
+
+  const done={
+    diagnostico:!!S.diagLock,
+    resultado:!!S.diagLock,
+    casos:CASOS_ESTUDIO.every(c=>[0,1,2].some(j=>((S.casos||{})[c.id+'.'+j]||'').trim())),
+    feedback:!!S.finLock,
+    smart:!!S.finLock,
+    seguimiento:Object.keys(sg).some(k=>/s$/.test(k)&&sg[k])
+  };
+
+  const nDone=ORDER.filter(k=>done[k]).length,pct=Math.round(nDone/ORDER.length*100),nextId=ORDER.find(k=>!done[k]),navName=(NAV.find(n=>n[0]===nextId)||[])[1];
+
+  const top=h('header',{className:'top'},D('wrap',h('span',{className:'brand'},'Liderazgo Femenino'),auth?h('nav',{className:'links','aria-label':'Secciones'},...NAV.map(([id,t])=>h('a',{key:id,href:'#'+id,className:(act===id?'on ':'')+(done[id]?'ok':'')},(done[id]?'✓ ':'')+t))):D('links'),auth&&h('button',{className:'btn ghost',onClick:logout},'Salir')),auth&&D('prog',h('i',{style:{width:pct+'%'}})));
+
+  const hero=h('section',{className:'hero',id:'inicio',style:{borderTop:0,padding:'72px 0 88px'}},D('wrap',
+    D('',h('h1',null,'Workbook de Liderazgo Femenino'),h('p',null,auth?'Bienvenida, '+email+'. Desarrolla tu posicionamiento ejecutivo, autoconfianza y navegación política.':'Cuaderno interactivo de desarrollo directivo, visibilidad estratégica y negociación.'),
+      auth?h('div',{className:'login'},h('a',{className:'btn',href:'#'+(nextId||'recursos')},nDone===0?'Comenzar autodiagnóstico inicial':nextId?'Continuar: '+navName:'Ver Herramientas e IA'),h('span',{className:'cnt'},nDone+' de '+ORDER.length+' pasos completados')):h('form',{className:'login',onSubmit:login},h('input',{type:'email',required:true,placeholder:'tu.correo@empresa.com','aria-label':'Correo electrónico',value:email,onChange:e=>setEmail(e.target.value)}),h('button',{className:'btn',type:'submit'},'Ingresar al Workbook'))),
+    D('photo',h('span',{className:'tag'},'Te da la bienvenida'),h('img',{src:PHOTO,alt:'Fotografía de Guido Cattaneo'}),h('b',null,'Guido Cattaneo'),h('span',null,'Especialista en Liderazgo y Posicionamiento Ejecutivo'))));
+
+  const guido=h('section',{id:'guido',className:'dark'},D('wrap',h('h2',null,'Experiencia y Formación de Guido Cattaneo'),h('p',{className:'lead'},'Coach ejecutivo y de negocios que ayuda a líderes exitosos a llevar su desempeño al siguiente nivel. Exdirector general (CEO), combina visión estratégica de negocio con conversaciones abiertas que generan cambios transformadores.'),
+    D('cols',D('',h('h4',null,'Experiencia'),h('ul',{className:'acc'},...['Más de 20 años en posiciones ejecutivas dirigiendo negocios en Europa y Norteamérica, con empresas líderes del sector automotriz como Brembo, Rassini y ZF.','En 2007 fundó Guido Cattaneo International, firma boutique de coaching y consultoría para ejecutivos y organizaciones.','Vive y trabaja en Norteamérica desde 1996; originario de Italia, radica en la Ciudad de México y habla italiano, español e inglés.','Acompaña a altos directivos de distintos países para elevar su efectividad de liderazgo y organizacional.'].map(t=>h('li',{key:t},t)))),
+    D('',h('h4',null,'Formación y acreditaciones'),h('ul',{className:'acc'},...['Executive Coach certificado – John Mattone ILEC','EQ-i 2.0 / EQ 360 – MHS Emotional Intelligence','Executive & Team Coaching – Marshall Goldsmith Stakeholder Centered Coaching','Global Leader of the Future Assessment – Marshall Goldsmith SCC','Masterful Coach – Robert Hargrove','Executive Coach – Mercedes Jahn y Oriana Tickell, Corpxcoach','Happiness at Work Assessment – iOpener Institute','Credencial ACC – ICF','Contador Público – I.T.C. V. Emanuele II'].map(t=>h('li',{key:t},t))))),
+    h('p',{className:'clients'},h('b',null,'Organizaciones con las que ha trabajado: '),'Ford, Coca-Cola Femsa, Ferrero, GNP, Chevron, Sigma Alimentos, Colgate-Palmolive, American Express, Visa, Accenture, HSBC, Google, Facebook, AB InBev, entre otras.'),
+    h('p',{className:'clients'},h('a',{href:'https://www.guidocattaneo.com',target:'_blank',rel:'noopener'},'guidocattaneo.com'),' · ',h('a',{href:'https://www.linkedin.com/in/guidocattaneo',target:'_blank',rel:'noopener'},'LinkedIn'))));
+
+  if(!auth)return h(Fragment,null,top,hero,guido,h('footer',null,D('wrap','Workbook: Liderazgo Femenino y Posicionamiento Ejecutivo · Guido Cattaneo & Luisa Cárdenas')));
+
+  const guia=Sec('guia','Cómo usar tu workbook','Este cuaderno está diseñado como una herramienta de trabajo táctica. Responde los casos con ejemplos reales de tu rol o tus aspiraciones inmediatas.',[
+    D('doms',...DOMINIOS.map((d,i)=>h('div',{key:d.id,style:{borderLeft:'4px solid '+DC[i],paddingLeft:14}},h('b',null,d.name),h('span',null,d.desc)))),
+    h('h3',null,'Ruta de desarrollo recomendada'),
+    h('ol',{className:'route'},...['Responde el autodiagnóstico inicial (15 minutos) para generar tu Mapa de Liderazgo.','Analiza los casos de Lagarde, Nooyi y Gates y recibe feedback de la IA sobre tu análisis.','Usa el prompt personalizado de cada caso para profundizar tu análisis con IA.','Responde el evaluación final del día 90: generará tu Plan de Marca Personal y Visibilidad a 90 días.','Descarga tu plan en PDF y da seguimiento semanal con tu plantilla pre-llenada.'].map((t,i)=>h('li',{key:i},t))),
+    D('note','Responde con total honestidad. Los datos se guardan en tu navegador para que avances a tu propio ritmo.')],'alt');
+
+  const diagS=Sec('diagnostico','Autodiagnóstico inicial','Califica cada afirmación pensando en los últimos 6 meses (1 casi nunca, 5 casi siempre). Tu primera reacción suele ser la más precisa.',[h(MapaLider,{ans:diag}),h(Quiz,{items:AFIRMACIONES_INICIALES,ans:diag,locked:!!S.diagLock,grouped:true,cta:'Procesar y guardar autodiagnóstico',onAns:(id,v)=>put('diag')(id,v),onDone:()=>{set('diagLock',true);go('resultado')}})]);
+
+  const txtAct=i=>{const a=ACT[i];const r=a.f.map(([k,l])=>{const v=String((S.acts||{})[i+k]||'').trim();return v?l+': '+v:''}).filter(Boolean);return{vacio:!r.length,texto:'Actividad «'+a.nom+'». Objetivo: '+a.obj+(r.length?'\n\nRespuestas:\n'+r.join('\n'):'')}};
+
+  const CB='💡 Consultar con Coach de IA';
+  const actBtn=i=>{const x=txtAct(i);return h('button',{type:'button',className:'coach-btn no-print',onClick:()=>setCoach({k:Date.now(),modulo:'Módulo '+(i+1)+': '+MODS[i],actividad:'Actividad: '+ACT[i].nom,texto:x.texto,vacio:x.vacio})},CB)};
+
+  const analisisBtn=()=>h('div',{className:'no-print'},h('button',{type:'button',className:'coach-btn big',onClick:()=>setCoach({k:Date.now(),modulo:'Autodiagnóstico inicial',actividad:'Análisis de Mapa de Liderazgo',vacio:false,texto:'Puntajes por dominio (suma de 3 a 15):\n'+DOMINIOS.map((d,i)=>d.name+': '+sD[i]+' / 15 ('+NIV[nivel(sD[i])]+')').join('\n')+(S.finLock?'\n\nResultado Final:\n'+DOMINIOS.map((d,i)=>d.name+': '+sF[i]+' / 15 ('+NIV[nivel(sF[i])]+')').join('\n'):'')+'\n\nSolicito una retroalimentación sobre mis fortalezas y áreas prioritarias de desarrollo en liderazgo femenino.'})},'🤖 Solicitar Análisis de Mapa al Coach'));
+
+  const resS=Sec('resultado','Mapa de Liderazgo Femenino','Visualiza el balance de tus 8 dominios directivos en una escala de 3 a 15 puntos.',S.diagLock?[
+    h(Radar,{series:[{v:sD,color:'#F87F57',fill:'rgba(248,127,87,0.30)'}]}),
+    h(Legend,{items:[['#F87F57','Autodiagnóstico inicial']]}),
+    D('tw',h('table',null,h('thead',null,h('tr',null,['Dominio Directivo','Puntaje','Nivel','Diagnóstico de Situación'].map(t=>h('th',{key:t},t)))),
+      h('tbody',null,...DOMINIOS.map((d,i)=>{const n=nivel(sD[i]);return h('tr',{key:d.id},h('td',null,h('b',null,d.name)),h('td',null,h('b',null,sD[i]+' / 15'),D('meter',h('i',{style:{width:(sD[i]-3)/12*100+'%',background:DC[i]}}))),h('td',null,h('span',{className:'pill lv'+n},NIV[n])),h('td',null,X.rub[i][n]))})))),
+    D('note','Por construir (3 a 7 pts): Tu foco inicial debe ser desmantelar dudas y fijar límites. En desarrollo (8 a 11 pts): Tienes herramientas, consolida tu estrategia de visibilidad y patrocinio. Sólido (12 a 15 pts): Maximiza tu influencia y actúa como sponsor de otras mujeres.'),
+    analisisBtn(),Next('resultado')
+  ]:[h('p',null,'Procesa tu autodiagnóstico inicial para ver aquí tu mapa radial.'),h('a',{className:'btn',href:'#diagnostico'},'Ir al autodiagnóstico')],'alt');
+
+  const actArt=(a,i)=>h('article',{key:'a'+i,id:'act-'+i,className:'act',style:{borderLeft:'4px solid '+DC[i],paddingLeft:24}},
+    h('span',{className:'tag'},h('i',{style:{background:DC[i]}}),'Módulo '+(i+1)+' · '+MODS[i]),h('h3',null,'Actividad: «'+a.nom+'»'),h('p',{className:'meta'},a.cap+' · Aplicación táctica'),h('p',{className:'obj'},a.obj),
+    D('act-g',D('',h('h4',null,'Pasos sugeridos'),h('ol',null,...a.pasos.map((p,j)=>h('li',{key:j},p)))),D('',h('h4',null,'Entregable'),h('p',null,a.prod))),
+    D('fields',h('h4',null,'Tus respuestas y plan táctico'),...a.f.map(([k,l,t])=>h(Field,{key:k,label:l,t,v:(S.acts||{})[i+k],on:v=>put('acts')(i+k,v)}))),actBtn(i),Cont(i<ACT.length-1?'act-'+(i+1):'feedback',i<ACT.length-1?'Guardar y continuar a la siguiente actividad':'Continuar al evaluación final del día 90'));
+
+  const casos=Sec('casos','Casos Prácticos con Feedback de IA','Analiza a tres referentes globales. Redacta tu análisis, envíalo a la IA y recibe un feedback analítico y constructivo.',CASOS_ESTUDIO.map((c,i)=>h('article',{key:c.id,id:'caso-'+i,className:'act',style:{borderLeft:'4px solid '+PC[i],paddingLeft:24}},
+    h('span',{className:'tag'},h('i',{style:{background:PC[i]}}),'Caso '+(i+1)+' de '+CASOS_ESTUDIO.length),h('h3',null,c.titulo),h('h4',{style:{marginTop:16}},'Problemática del caso'),h('p',{className:'case'},c.descripcion),
+    h(CasoIA,{c,a:[0,1,2].map(j=>(S.casos||{})[c.id+'.'+j]),fb:(S.casosFb||{})[c.id],onText:(j,v)=>put('casos')(c.id+'.'+j,v),onFb:r=>put('casosFb')(c.id,r)}),
+    Cont(i<CASOS_ESTUDIO.length-1?'caso-'+(i+1):'feedback',i<CASOS_ESTUDIO.length-1?'Continuar al siguiente caso':'Continuar al evaluación final del día 90'))));
+
+  const cmp=S.finLock&&S.diagLock?[h('div',{id:'comparativo'},
+    D('tw',h('table',null,h('thead',null,h('tr',null,['Dominio Directivo','Inicial','Final','Avance','Evolución','Nivel Final'].map(t=>h('th',{key:t},t)))),
+      h('tbody',null,...DOMINIOS.map((d,i)=>{const df=sF[i]-sD[i];return h('tr',{key:d.id},h('td',null,h('b',null,d.name)),h('td',null,sD[i]),h('td',null,sF[i]),h('td',{style:{fontWeight:700,color:df>0?'#065f46':df<0?'#991b1b':'#4D270F'}},df>0?'+'+df:df),h('td',null,df>=2?'Consolidado':df<=-2?'Cuestionado':'Estable'),h('td',null,h('span',{className:'pill lv'+nivel(sF[i])},NIV[nivel(sF[i])])))})))),
+    h('br'),h(Radar,{series:[{v:sD,color:'#7a5236',fill:'rgba(122,82,54,0.18)'},{v:sF,color:'#F87F57',fill:'rgba(248,127,87,0.34)'}]}),
+    h(Legend,{items:[['#7a5236','Inicial'],['#F87F57','Final']]}),
+    D('note','Compara tu evaluación inicial y final para ajustar tus 3 pilares del Plan de Posicionamiento.'))]:[];
+
+  const plan=S.finLock?buildPlan(sF):null;
+  const trans=plan?[h('div',{id:'transicion',key:'tr'},h('h3',{style:{margin:'48px 0 8px'}},'Transición: de tu diagnóstico a tu plan'),h('p',{className:'lead',style:{margin:'0 0 24px'}},'Las tres prioridades de desarrollo se trabajan simultáneamente durante los 90 días.'),
+    ...plan.map((b,bi)=>D('pl',{key:b.id},h('span',{className:'dias'},b.dias),h('h3',{style:{margin:'6px 0 10px'}},b.nombre),h('span',{className:'pill lv'+b.n},NIV[b.n]+' · '+b.pct+'%'),D('meter',h('i',{style:{width:b.pct+'%',background:PC[bi]}})),
+      h('p',{style:{marginTop:14}},h('b',null,'Foco prioritario: '),DOMINIOS[b.f].name+' ('+sF[b.f]+' / 15)'),h('p',null,X.rub[b.f][b.fn]),h('p',{style:{margin:0}},h('b',null,'Cómo arrancará este bloque: '),b.obj[b.n]))))]:[];
+  const feed=Sec('feedback','Evaluación final · Día 90','Vuelve a responder las 24 afirmaciones. Con tus respuestas mediremos tu evolución y generaremos automáticamente tu Plan de Marca Personal y Visibilidad a 90 días.',[
+    h(Quiz,{items:finItems,ans:fin,locked:!!S.finLock,cta:'Procesar cierre y generar mi plan',onAns:(id,v)=>put('fin')(id,v),onDone:()=>{set('finLock',true);go('transicion')}}),...cmp,...trans,...(S.finLock?[Next('feedback')]:[])
+  ]);
+
+  const smartS=Sec('smart','Plan de Marca Personal y Visibilidad a 90 Días','Plan personalizado a partir de las tres áreas de desarrollo identificadas en tu diagnóstico inicial.',plan?[
+    D('only-print',h('h3',null,'Plan a 90 días · '+email)),
+    ...plan.map((b,bi)=>{const p=sm[b.id]||{};return h('div',{key:b.id,className:'pl',style:{borderTopColor:PC[bi]}},
+      h('span',{className:'dias'},b.dias),h('h3',{style:{margin:'6px 0 10px'}},b.nombre),h('span',{className:'pill lv'+b.n},NIV[b.n]+' · '+b.pct+'%'),
+      h('p',{style:{marginTop:14}},b.obj[b.n]),h('p',null,h('b',null,'Foco prioritario: '),DOMINIOS[b.f].name+' ('+sF[b.f]+' / 15)'),
+      h('h4',null,'Acciones por semana'),h('ol',null,...b.sem.map((t,k)=>h('li',{key:k},t))),
+      h('p',null,h('b',null,'Indicador de éxito: '),b.ind),
+      h(Field,{label:'Mi compromiso personal para este bloque',t:'a',v:p.fr,on:v=>set('smart',q=>({...(q||{}),[b.id]:{...((q||{})[b.id]||{}),fr:v}})),ph:'Ejemplo: Durante estos 30 días voy a [acción] para lograr [resultado] y lo revisaré el [fecha].'}))}),
+    D('note','Un plan breve y medible supera a un documento extenso que se archiva. Tu plantilla de seguimiento semanal ya se pre-llenó con estas acciones.'),
+    D('ia-box no-print',h('h4',null,'📥 Descargas'),h('p',{className:'meta'},'Lleva tu plan y tu plantilla contigo.'),D('login',h('button',{type:'button',className:'btn',onClick:()=>pdfPlan(email,plan,sF,sm,sg,'plan')},'⬇ Descargar Plan de 90 días (PDF)'),h('button',{type:'button',className:'btn ghost',onClick:()=>pdfPlan(email,plan,sF,sm,sg,'seg')},'⬇ Descargar plantilla de seguimiento (PDF)')))
+  ]:[h('p',{key:'m'},'Procesa tu evaluación final del día 90 para generar tu plan personalizado.'),h('a',{key:'l',className:'btn',href:'#feedback'},'Ir al evaluación final del día 90')],'alt printable');
+
+  const weeks=plan?plan.flatMap((b,bi)=>b.sem.map((t,k)=>({n:bi*4+k+1,bi,t}))):[];
+  const lg=weeks.filter(w=>sg['w'+w.n+'s']==='Logrado').length;
+  const segS=Sec('seguimiento','Plantilla de Seguimiento Semanal','Pre-llenada con las acciones sugeridas por tu plan. Edítalas, marca tu avance y registra tus aprendizajes.',plan?[
+    D('cnt',lg+' de '+weeks.length+' semanas logradas',D('meter',h('i',{style:{width:lg/weeks.length*100+'%',background:'var(--cyan)'}}))),
+    ...plan.map((b,bi)=>h('div',{key:b.id},h('h3',{style:{margin:'32px 0 6px',borderLeft:'6px solid '+PC[bi],paddingLeft:14}},b.dias+' · '+b.nombre),
+      ...weeks.filter(w=>w.bi===bi).map(w=>{const k='w'+w.n;return h('div',{key:k,className:'wk'},h('b',null,'Semana '+w.n),h(TA,{v:sg[k+'a']!==undefined?sg[k+'a']:w.t,on:v=>put('seg2')(k+'a',v)}),h('select',{'aria-label':'Estado de la semana '+w.n,value:sg[k+'s']||'',onChange:e=>put('seg2')(k+'s',e.target.value)},h('option',{value:''},'Estado…'),...['Pendiente','En curso','Logrado','Ajustar'].map(o=>h('option',{key:o},o))),h(TA,{v:sg[k+'n'],on:v=>put('seg2')(k+'n',v),ph:'Notas y aprendizaje...'}))}))),
+    h('button',{key:'dl',type:'button',className:'btn no-print',style:{marginTop:28},onClick:()=>pdfPlan(email,plan,sF,sm,sg,'seg')},'⬇ Descargar plantilla de seguimiento (PDF)')
+  ]:[h('p',{key:'m'},'Tu plantilla semanal se generará al procesar el evaluación final del día 90.'),h('a',{key:'l',className:'btn',href:'#feedback'},'Ir al evaluación final del día 90')],'printable');
+
+  const rec=Sec('recursos','Prompts de IA y Herramientas Avanzadas','Utiliza estos prompts probados copiándolos en ChatGPT o Claude para acelerar tu preparación.',[
+    h('h3',null,'Prompts Ejecutivos de Aceleración con IA'),
+    h('p',{className:'meta'},'Copia y pega en ChatGPT/Claude reemplazando los textos entre [corchetes].'),h('br'),
+    D('sug',h('b',null,'Prompt 1: Desmantelar la Duda Profesional'),h('p',null,'"Actúa como mentora ejecutiva sénior especialista en liderazgo femenino. Tengo la oportunidad de [describir puesto/proyecto], pero dudo en postularme porque siento que [describir temor]. Revisa mi trayectoria [insertar breve perfil] y ayúdame a construir 5 evidencias objetivas de mi capacidad y un guion de 3 frases para auto-presentarme con autoridad."')),
+    D('sug',h('b',null,'Prompt 2: Visibilidad Estratégica sin Presunción'),h('p',null,'"Actúa como consultora en marca personal ejecutiva. Logré el siguiente resultado: [insertar logro/métrica]. Redacta 3 opciones de mensajes estructurados (para correo o junta directiva) que comuniquen este éxito enfocado en impacto de negocio, evitando sonar presumida pero asegurando que mi nombre se asocie con el resultado."')),
+    D('sug',h('b',null,'Prompt 3: Simular una Negociación Difícil'),h('p',null,'"Simula ser mi superior directivo [describir perfil, ej. centrado solo en costos]. Voy a solicitar [aumento/recursos/tiempo]. Dame las 3 objeciones más duras que me pondrás y evalúa mis respuestas usando la técnica de Intereses vs. Posiciones y BATNA."')),
+    D('doms',...[
+      ['Identidad y Autoconfianza','Distingue limitaciones reales de barreras culturales.'],
+      ['Estructuras de Poder','Navega la política corporativa con ética e influencia.'],
+      ['Visibilidad de Impacto','Posiciona tus métricas en espacios de alta decisión.'],
+      ['Negociación Colaborativa','Crea valor mutuo respaldando peticiones en datos.']
+    ].map(([a,b])=>h('div',{key:a},h('b',null,a),h('span',null,b))))
+  ],'alt');
+
+  return h(Fragment,null,top,hero,guido,guia,diagS,resS,casos,feed,smartS,segS,rec,
+    h('footer',null,D('wrap','Workbook: Liderazgo Femenino y Posicionamiento Ejecutivo · Guido Cattaneo & Luisa Cárdenas')),
+    coach&&h(CoachModal,{key:coach.k,ctx:coach,onClose:()=>setCoach(null)}));
+}
+
+ReactDOM.createRoot(document.getElementById('root')).render(h(App));
+</script>
+
+<script src="js/plan90.js"></script>
+
+</body>
+</html>
